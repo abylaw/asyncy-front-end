@@ -10,3 +10,12 @@
     /builds           CI results
       /:id            Single build results
 ```
+
+
+## `/(create|+|new)`
+> Create service
+
+Choose type: Container, Function, Story
+Link Repository
+Link Registry (Use Asyncy)
+Apply for alias (optional)
