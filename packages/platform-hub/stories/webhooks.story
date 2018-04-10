@@ -6,15 +6,15 @@ github webhooks as request
     data = request.body
 
     # get the repo data
-    repo = next repo --id data.repository.id
+    repo = next repos/get --id data.repository.id
     if repo
 
         event = request.headers['X-GitHub-Event']
         if event in ['create', 'push']
-            async next ci
+            async next repos/test
 
         else if event is 'delete'
-            next services/delete
+            next repos/delete
             exit
 
-        next services/update
+        next repos/update

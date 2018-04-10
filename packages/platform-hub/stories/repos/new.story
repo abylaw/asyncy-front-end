@@ -30,4 +30,4 @@ graphql '''
   }
 '''
 
-next ci
+next repos/ci
