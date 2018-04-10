@@ -2,11 +2,23 @@
 Hub CI to check service configuration
 ###
 
-slug = webhook.data.repository.full_name
-sha = webhook.data.head_commit.id
+slug = data.repository.full_name
+sha = data.head_commit.id
 status_endpoint = '/repos/{{slug}}/statuses/{{sha}}'
-target_url = '{{env.url}}/gh/{{slug}}/builds/{{__TBD__}}'
 
+build = graphql '''
+      query{
+          insert new build
+          return id
+      }
+      '''
+
+target_url = '{{env.url}}/gh/{{slug}}/builds/{{build.__}}'
+
+
+###
+Post a pending build status
+###
 github post status_endpoint {
     'state': 'pending'
     'description': 'Running test suite...'
@@ -14,23 +26,39 @@ github post status_endpoint {
     'context': 'ci/asyncy'
 }
 
-
+###
+Run Tests
+###
 try
-    # clone the project
-    github clone slug `/clone`
+    git clone data.repository.git_url `/clone`
 
-    # parse the yaml
-    config = yaml parse `/clone/asyncy.yml`
+    assert (file exists `/clone/asyncy.yml`)
 
-    validate config `/assets/yaml-validation.json`
+    yaml `/clone/asyncy.yml` `/assets/yaml.json`
 
     state = 'success'
     description = 'Build success! :tada:'
 
+    graphql '''
+      mutation{
+        ...
+      }
+    '''
+
 catch as output
-    # [TODO] store output
+    graphql '''
+      mutation{
+        ...
+      }
+    '''
+
     state = 'failed'
     description = 'Build failed :frown:'
+
+
+###
+Finally, post resulting status
+###
 
 github post status_endpoint {
     'state': state

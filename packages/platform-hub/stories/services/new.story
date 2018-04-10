@@ -4,10 +4,10 @@ Add a new service to the Hub
 
 
 # https://developer.github.com/v3/repos/keys/#add-a-new-deploy-key
-github post /'repos/{{slug}}/keys' {
+github post '/repos/{{slug}}/keys' {
     'title': 'Asyncy Hub',
     'key': env.github_clone_ssh_pem,
-    'read_only': True
+    'read_only': true
 }
 
 # https://developer.github.com/v3/repos/hooks/#create-a-hook
@@ -23,8 +23,11 @@ res = github post '/repos/{{slug}}/hooks' {
     'active': 'true'
 }
 
-# add to database
-res.hookid
-# [TODO]
+# [TODO] add to database
+graphql '''
+  mutation{
+    hookid: {{res.hookid}}
+  }
+'''
 
-next `ci.story`
+next ci

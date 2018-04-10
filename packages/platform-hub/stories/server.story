@@ -3,16 +3,18 @@ GitHub webhook server
 ###
 
 github webhooks as request
-    event = request.headers['X-GitHub-Event']
+    data = request.body
 
     # get the repo data
-    repo = next `repo.story` --id=repository.id
+    repo = next repo --id data.repository.id
+    if repo
 
-    if event in ['create', 'push']
-        async next `ci.story`
+        event = request.headers['X-GitHub-Event']
+        if event in ['create', 'push']
+            async next ci
 
-    else if event is 'delete'
-        next `services/delete.story`
-        exit
+        else if event is 'delete'
+            next services/delete
+            exit
 
-    next `services/update.story`
+        next services/update

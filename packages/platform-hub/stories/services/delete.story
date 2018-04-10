@@ -1,7 +1,22 @@
-# Delete a service
+###
+Delete a Service
+###
 
-Need to inform any active subscribers of this fact
-Mark as depreciated and removing in 60 days
 
-wait '60 days'
-  remove from hub
+###
+Email subscribers/users that this project is being archived
+###
+res = graphql '''
+  query{
+    subscribers
+  }
+'''
+
+async foreach res.data...
+    mailgun ...
+
+res = graphql '''
+  mutation{
+    state: archived
+  }
+'''
