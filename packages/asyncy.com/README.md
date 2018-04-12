@@ -1,5 +1,9 @@
-# Asyncy Homepage
+# Asyncy Landing Page
 
---- Place logo here ---
+```
+npm install --global gatsby-cli
+npm install
+gatsby develop
+```
 
---- Place badges  ---
+Navigate to localhost:8000
