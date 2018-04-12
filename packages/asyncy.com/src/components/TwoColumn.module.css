@@ -1,0 +1,9 @@
+@media all and (max-width: 400px) {
+  .children {
+    flex-basis: 100%;
+  }
+}
+
+.children {
+  flex-basis: 50%;
+}

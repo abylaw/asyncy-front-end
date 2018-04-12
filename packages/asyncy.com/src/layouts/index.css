@@ -1,0 +1,36 @@
+body {
+  background: black;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  font-size: 0.8em;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 9px 28px;
+}
+
+input {
+  border-radius: 6px;
+  border: none;
+  padding: 6px 28px;
+  margin-bottom: 10px;
+  background-color: rgba(255,255,255,0.14);
+  color: white;
+}
+
+button.primary {
+  background-color: #515CF9;
+}
+
+button.secondary {
+  background-color: white;
+  color: black;
+}
+
