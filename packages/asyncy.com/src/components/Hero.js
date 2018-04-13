@@ -25,7 +25,7 @@ const Hero = ({ siteTitle }) => (
       }}>
         <input type='text' placeholder='Email address' style={{
           marginRight: '10px',
-          width: '380px',
+          width: '420px',
         }}/>
         <button className='primary'>Get notified</button>
       </div>

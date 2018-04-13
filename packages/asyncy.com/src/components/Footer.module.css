@@ -1,12 +1,23 @@
-.nav {
-  
-}
-
 .li {
-  font-size: 0.9em;
+  font-size: 1.1em;
   margin-bottom: 0.5em;
 }
 
+.li a {
+  color: #A3A3A3;
+}
+
+.li a:hover {
+  color: white;
+  transition: color 0.3s ease;
+ -webkit-transition: color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
+
 .menuHeader {
+  font-size: 1em;
+  color: white;
   margin-bottom: 1em;
 }

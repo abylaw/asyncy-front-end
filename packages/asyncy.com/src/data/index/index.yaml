@@ -1,5 +1,5 @@
 sections:
-- title: Meet storyscript
+- title: Meet Storyscript
   description: Inspired by the Zen of Python where functions are microservices, Storyscript
     is an high-level language that can be used to orchestrate microservices in an
     algorithmic way.

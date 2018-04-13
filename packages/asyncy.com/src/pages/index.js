@@ -23,12 +23,19 @@ const IndexPage = ({ data }) => (
       <div style={{
         display: 'flex',
         justifyContent: 'space-between',
+        fontSize: '0.9em',
       }}>
         {
           data.allIndexYaml.edges[0].node.usecases.map((usecase, index) => {
             return <div key={index}>
               <h3>{usecase.title}</h3>
-              <p>{usecase.description}</p>
+              <p style={{
+                width: '320px',
+                fontSize: '1em',
+                lineHeight: '1.95em',
+              }}>
+                {usecase.description}</p>
+              
             </div>;
           })
         }
@@ -44,9 +51,9 @@ const IndexPage = ({ data }) => (
     }}>
       <h2>Learn with the community</h2>
       <div style={{
-        width: '570px',
-        margin: '0 auto',
-      
+        width: '800px',
+        margin: '40px auto',
+
       }}>
         <div style={{
           display: 'grid',
@@ -131,23 +138,32 @@ const IndexPage = ({ data }) => (
     </section>
 
     <div style={{
-      margin: '0 auto',
+      margin: '15px auto',
       transform: 'translate(0, -50%)',
       textAlign: 'center',
-      width: '50%',
+      width: '60%',
       backgroundColor: '#00C584',
-      padding: '50px',
+      padding: '40px',
       borderRadius: '4px',
-      boxShadow: '0 1px 8px 0 rgba(0,0,0,0.5)',
+      boxShadow: '0 1px 13px 0 rgba(0,0,0,0.5)',
+
     }}>
-      <h3>Sign up to get updates</h3>
+      <h4>Sign up to get updates</h4>
       <input type="text" placeholder="Email address" style={{
         backgroundColor: 'white',
         color: 'grey',
         marginRight: '10px',
+        width: '420px',
+        height: '48px',
+        boxShadow: '0px 1px 3px #4AB390',
       }}/>
       <button style={{
-        backgroundColor: '#008257',
+         fontSize: '0.8em',
+         backgroundColor: '#008257',
+         color: 'white',
+         border: 'none',
+         bordeRadius: '6px',
+         padding: '12px 28px',
       }}>Get notified</button>
     </div>
   </div>
