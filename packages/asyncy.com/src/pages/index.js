@@ -46,6 +46,7 @@ const IndexPage = ({ data }) => (
       <div style={{
         width: '570px',
         margin: '0 auto',
+      
       }}>
         <div style={{
           display: 'grid',
@@ -119,8 +120,8 @@ const IndexPage = ({ data }) => (
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'space-evenly',
-        width: '60%',
-        margin: '45px auto 0 auto',
+        width: '80%',
+        margin: '35px auto 0 auto',
       }}>
         <img src={digitalOceanLogo}/>
         <img src={googleLogo}/>
