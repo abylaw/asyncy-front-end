@@ -5,7 +5,6 @@ const Hero = ({ title, subtitle }) => (
   <div
     style={{
       marginBottom: '70px',
-      padding: '0 25px',
     }}
   >
     <div
@@ -25,8 +24,8 @@ const Hero = ({ title, subtitle }) => (
         margin: '25px auto 20px auto',
       }} />
       <div style={{
-        width: '650px',
-        fontSize: '0.85em',
+        maxWidth: '650px',
+        fontSize: '1em',
         lineHeight: '1.9em',
         margin: '0 auto',
       }}>

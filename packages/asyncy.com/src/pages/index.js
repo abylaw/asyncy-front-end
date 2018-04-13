@@ -9,14 +9,11 @@ import microsoftLogo from '../assets/microsoft_logo.svg'
 import amazonLogo from '../assets/amazon_logo.svg'
 import digitalOceanLogo from '../assets/digital_ocean_logo.svg'
 
-import styles from './index.module.css'
-
 const IndexPage = ({ data }) => (
   <div>
     <div
       style={{
         marginBottom: '120px',
-        padding: '0 25px',
       }}
     >
       <div
@@ -43,19 +40,15 @@ const IndexPage = ({ data }) => (
       </div>
     </div>
 
-    <section className={styles.section}>
+    <section className='section'>
       <AlternatingTwoColumn textData={data.allIndexYaml.edges[0].node.sections} />
     </section>
 
-    <section className={styles.section}>
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        fontSize: '0.9em',
-      }}>
+    <section className='section'>
+      <div className='columns'>
         {
           data.allIndexYaml.edges[0].node.usecases.map((usecase, index) => {
-            return <div key={index}>
+            return <div className='column' key={index}>
               <h3>{usecase.title}</h3>
               <p style={{
                 width: '320px',
@@ -73,7 +66,8 @@ const IndexPage = ({ data }) => (
     <div style={{
       textAlign: 'center',
       backgroundColor: '#515CF9',
-      width: '100%',
+      width: '100vw',
+      marginLeft: '-25px',
       paddingBottom: '45px',
       paddingTop: '45px',
     }}>
@@ -141,8 +135,9 @@ const IndexPage = ({ data }) => (
     </div>
 
     <section style={{
-      width: '100%',
-      margin: 0,
+      marginTop: 0,
+      width: '100vw',
+      marginLeft: '-25px',
       paddingBottom: '100px',
       paddingTop: '45px',
       textAlign: 'center',
