@@ -22,7 +22,7 @@ const Header = () => (
       }}
     >
       <div className={styles.logoContainer}>
-        <img src={logo}/>
+        <Link to='/'><img src={logo}/></Link>
       </div>
 
       <nav style={{
@@ -36,10 +36,10 @@ const Header = () => (
           flexFlow: 'row wrap',
           justifyContent: 'space-between',
         }}>
-          <li className={styles.li}><Link to='/'>Platform</Link></li>
-          <li className={styles.li}><Link to='/'>About</Link></li>
-          <li className={styles.li}><Link to='/'>Events</Link></li>
-          <li className={styles.li}><Link to='/'>Contact</Link></li>
+          <li className={styles.li}><Link to='/platform'>Platform</Link></li>
+          <li className={styles.li}><Link to='/about'>About</Link></li>
+          <li className={styles.li}><Link to='/events'>Events</Link></li>
+          <li className={styles.li}><Link to='/contact'>Contact</Link></li>
         </ul>
       </nav>
     </div>

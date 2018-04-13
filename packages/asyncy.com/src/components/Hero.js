@@ -1,10 +1,10 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const Hero = ({ siteTitle }) => (
+const Hero = ({ title, subtitle }) => (
   <div
     style={{
-      marginBottom: '120px',
+      marginBottom: '70px',
       padding: '0 25px',
     }}
   >
@@ -15,19 +15,22 @@ const Hero = ({ siteTitle }) => (
       }}
     >
       <h1>
-        Write stories, then code.
+        {title}
       </h1>
-      <subtitle>
-        The choreographed microservice platform for rapid application development.
-      </subtitle>
       <div style={{
-        margin: '40px 0 0 0',
+        boxSizing: 'border-box',
+        height: '2px',
+        width: '50px',
+        border: '2px solid #8FC2FA',
+        margin: '25px auto 20px auto',
+      }} />
+      <div style={{
+        width: '650px',
+        fontSize: '0.85em',
+        lineHeight: '1.9em',
+        margin: '0 auto',
       }}>
-        <input type='text' placeholder='Email address' style={{
-          marginRight: '10px',
-          width: '420px',
-        }}/>
-        <button className='primary'>Get notified</button>
+        <subtitle>{subtitle}</subtitle>
       </div>
     </div>
   </div>

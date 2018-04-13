@@ -13,7 +13,35 @@ import styles from './index.module.css'
 
 const IndexPage = ({ data }) => (
   <div>
-    <Hero></Hero>
+    <div
+      style={{
+        marginBottom: '120px',
+        padding: '0 25px',
+      }}
+    >
+      <div
+        style={{
+          width: '100%',
+          textAlign: 'center',
+        }}
+      >
+        <h1>
+          Write stories, then code.
+        </h1>
+        <subtitle>
+          The choreographed microservice platform for rapid application development.
+        </subtitle>
+        <div style={{
+          margin: '40px 0 0 0',
+        }}>
+          <input type='text' placeholder='Email address' style={{
+            marginRight: '10px',
+            width: '420px',
+          }}/>
+          <button className='primary'>Get notified</button>
+        </div>
+      </div>
+    </div>
 
     <section className={styles.section}>
       <AlternatingTwoColumn textData={data.allIndexYaml.edges[0].node.sections} />
