@@ -1,15 +1,65 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Hero from '../components/Hero'
-import TwoColumn from '../components/TwoColumn'
 import AlternatingTwoColumn from '../components/AlternatingTwoColumn'
+
+import appsIcon from '../assets/icon_apps.svg'
+import automationIcon from '../assets/icon_automation.svg'
+import integrationIcon from '../assets/icon_integration.svg'
 
 import googleLogo from '../assets/google_logo.svg'
 import microsoftLogo from '../assets/microsoft_logo.svg'
 import amazonLogo from '../assets/amazon_logo.svg'
 import digitalOceanLogo from '../assets/digital_ocean_logo.svg'
+import placeholder from '../assets/placeholder.svg'
 
-const IndexPage = ({ data }) => (
+const data = {
+  title: 'Write stores, then code.',
+  subtitle: 'The choreographed microservice platform for rapid application development.',
+  sections: [
+    {
+      title: 'Meet Storyscript',
+      description: 'Inspired by the Zen of Python where functions are microservices, Storyscript is an high-level language that can be used to orchestrate microservices in an algorithmic way.',
+      image: placeholder,
+      link: '/storyscript',
+      linkText: 'Learn More'
+    },
+    {
+      title: 'Microservice choreography',
+      description: 'Microservice Choreography is an architecture layer above orchestration eliminating service coupling and seperates logic from code with limited to no devops. Perfect for rapid application prototyping to production.',
+      image: placeholder,
+      link: '/storyscript',
+      linkText: 'Learn More'
+    }
+  ],
+  usecases: [
+    {
+      title: 'Applications',
+      description: 'Prototype applications 10-100x quicker on a production-grade platform powered by microservices. Perfect for backends and APIs.',
+      icon: appsIcon,
+    },
+    {
+      title: 'Automation',
+      description: 'Transparent, long-running logic for customer retention and marketing automation. Perfect for social media and cron jobs.',
+      icon: automationIcon,
+    },
+    {
+      title: 'Integration',
+      description: 'Seamlessly connect services and applications with reusable containers. Perfect for devops, webhooks and bots.',
+      icon: integrationIcon,
+    }
+  ],
+  community: {
+    title: 'Learn with the community',
+  },
+  opensource: {
+    title: 'Open Source',
+    description: 'Run Asyncy in any environment. Locally, or on our hosted cloud.',
+    logos: [digitalOceanLogo, googleLogo, amazonLogo, microsoftLogo],
+  }
+}
+
+const IndexPage = () => (
   <div>
     <div
       style={{
@@ -23,10 +73,10 @@ const IndexPage = ({ data }) => (
         }}
       >
         <h1>
-          Write stories, then code.
+          {data.title}
         </h1>
         <subtitle>
-          The choreographed microservice platform for rapid application development.
+          {data.subtitle}
         </subtitle>
         <div className='columns is-variable is-1' style={{
           maxWidth: '500px',
@@ -53,14 +103,17 @@ const IndexPage = ({ data }) => (
     </div>
 
     <section className='section'>
-      <AlternatingTwoColumn textData={data.allIndexYaml.edges[0].node.sections} />
+      <AlternatingTwoColumn textData={data.sections} />
     </section>
 
     <section className='section'>
       <div className='columns'>
         {
-          data.allIndexYaml.edges[0].node.usecases.map((usecase, index) => {
+          data.usecases.map((usecase, index) => {
             return <div className='column' key={index}>
+              <img src={usecase.icon} style={{
+                marginBottom: '0.8em',
+              }}/>
               <h3>{usecase.title}</h3>
               <p style={{
                 width: '320px',
@@ -68,7 +121,6 @@ const IndexPage = ({ data }) => (
                 lineHeight: '1.95em',
               }}>
                 {usecase.description}</p>
-              
             </div>;
           })
         }
@@ -83,7 +135,7 @@ const IndexPage = ({ data }) => (
       paddingBottom: '45px',
       paddingTop: '45px',
     }}>
-      <h2>Learn with the community</h2>
+      <h2>{data.community.title}</h2>
       <div style={{
         maxWidth: '800px',
         margin: '40px auto',
@@ -154,25 +206,26 @@ const IndexPage = ({ data }) => (
       textAlign: 'center',
       backgroundColor: '#2D2D2D',
     }}>
-      <h2>Open Source</h2>
-      <p>Run Asyncy in any environment. Locally, or on our hosted cloud.</p>
+      <h2>{data.opensource.title}</h2>
+      <p>{data.opensource.description}</p>
 
       <div className='columns' style={{
         maxWidth: '1000px',
-        margin: '0 auto',
+        margin: '0 auto 35px auto',
       }}>
-        <div className='column'>
-          <img src={digitalOceanLogo}/>
-        </div>
-        <div className='column'>
-          <img src={googleLogo}/>
-        </div>
-        <div className='column'>
-          <img src={amazonLogo}/>
-        </div>
-        <div className='column'>
-          <img src={microsoftLogo}/>
-        </div>
+        {
+          data.opensource.logos.map((logo) => (
+            <div className='column' style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+              <img src={logo} style={{
+                marginBottom: 0,
+              }}/>
+            </div>
+          ))
+        }
       </div>
     </section>
 
@@ -225,24 +278,3 @@ const IndexPage = ({ data }) => (
 )
 
 export default IndexPage
-
-export const indexDataQuery = graphql`
-  query IndexDataQuery {
-    allIndexYaml {
-      edges {
-        node {
-          sections {
-            title
-            description
-            link
-            linkText
-          }
-          usecases {
-            title
-            description
-          }
-        }
-      }
-    }
-  }
-`

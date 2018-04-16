@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="145px" height="145px" viewBox="0 0 145 145" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>8E13FFF7-BB30-4307-9F2F-8F87DF7CA81B@3x</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="145" height="145" rx="4"></rect>
+    </defs>
+    <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Events" transform="translate(-104.000000, -426.000000)">
+            <g id="Event-item" transform="translate(104.000000, 425.000000)">
+                <g id="Image-event" transform="translate(0.000000, 1.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#222222" xlink:href="#path-1"></use>
+                    <text id="Asyncy-MicroHack-Ams" mask="url(#mask-2)" font-family="GTAmericaMono-Bold, GT America Mono" font-size="12" font-weight="bold" line-spacing="18" letter-spacing="0.400000006" fill="#FFFFFF">
+                        <tspan x="12" y="70">Asyncy MicroHack</tspan>
+                        <tspan x="12" y="88" font-family="GTAmericaMono-Regular, GT America Mono" font-size="11" font-weight="normal" letter-spacing="0.436363637">Amsterdam</tspan>
+                        <tspan x="12" y="106" font-family="GTAmericaMono-Regular, GT America Mono" font-size="11" font-weight="normal" letter-spacing="0.436363637">March 1</tspan>
+                        <tspan x="62.7945455" y="106" font-family="GTAmericaMono-Regular, GT America Mono" font-weight="normal" letter-spacing="0.436363637"></tspan>
+                        <tspan x="12" y="124" font-family="Colfax-Bold, Colfax" letter-spacing="0.436363637"></tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

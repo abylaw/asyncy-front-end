@@ -1,53 +1,43 @@
 import React from 'react'
-import TwoColumn from "./TwoColumn.js";
+import Link from 'gatsby-link'
 
-const AlternatingTwoColumn = ({ textData }) => (
+const imageStyling = {
+  marginBottom: 0,
+}
+
+const AlternatingTwoColumn = ({ start, textData }) => (
   <div>
     {
-      textData.map((data, index) => {
-        if (index % 2 === 0) {
-         return <TwoColumn key={index}>
-          <div data-slot='left' style={{
-            backgroundColor: '#252525',
-            borderRadius: '7px',
-            padding: '25px',
-            height: '100%',
-          }}>
-            <code>
-              events 'new-user-signup' as data
-              twitter tweet 'Welcome @'
-              slack post 'New customer: . Yippie!'
-            </code>
+    textData.map((data, index) => {
+      return <div key={index} className='columns' style={{
+        margin: '65px 0',
+      }}>
+        { index % 2 === 0 &&
+          <div className='column is-narrow'>
+            <img style={imageStyling} src={data.image}/>
           </div>
-          <div data-slot='right' style={{
-            maxWidth: '490px',
-            marginLeft: 'auto',
-          }}>
-            <h2>{data.title}</h2>
-            <p>{data.description}</p>
-            <button className='secondary'>{data.linkText}</button>
-          </div>
-        </TwoColumn>
-        } else {
-          return <TwoColumn key={index}>
-          <div data-slot='left' style={{
-            maxWidth: '490px',
-            marginLeft: 'auto',
-          }}>
-            <h2>{data.title}</h2>
-            <p>{data.description}</p>
-            <button className='secondary'>{data.linkText}</button>
-          </div>
-          <div data-slot='right' style={{
-              backgroundColor: '#252525',
-              borderRadius: '7px',
-              padding: '25px',
-              height: '100%',
-            }}>
-          </div>
-        </TwoColumn>
         }
-      })
+        <div className='column' style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'flex-start',
+        }}>
+          <h2>{data.title}</h2>
+          <p>{data.description}</p>
+          { data.linkText &&
+            <Link to={data.link}>
+              <button className='secondary'>{data.linkText}</button>
+            </Link>
+          }
+        </div>
+        {index % 2 === 1 &&
+          <div className='column is-narrow'>
+            <img style={imageStyling} src={data.image}/>
+          </div>
+        }
+      </div>
+    })
     }
   </div>
 )
