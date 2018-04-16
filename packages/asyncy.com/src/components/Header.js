@@ -11,35 +11,23 @@ const Header = () => (
     }}
   >
     <div
-      className={styles.container}
+      className='columns'
       style={{
-        display: 'flex',
         margin: '0 auto',
-        flexFlow: 'row wrap',
         maxWidth: 1200,
-        justifyContent: 'space-between',
-        padding: '0 55px',
+        padding: '0 25px',
       }}
     >
-      <div className={styles.logoContainer}>
+      <div className={`${styles.logoContainer} column is-half`}>
         <Link to='/'><img src={logo}/></Link>
       </div>
 
-      <nav style={{
-        width: '50%',
-      }}>
-        <ul style={{
-          listStyle: 'none',
-          marginLeft: 0,
-          width: '100%',
-          display: 'flex',
-          flexFlow: 'row wrap',
-          justifyContent: 'space-between',
-        }}>
-          <li className={styles.li}><Link to='/platform'>Platform</Link></li>
-          <li className={styles.li}><Link to='/about'>About</Link></li>
-          <li className={styles.li}><Link to='/events'>Events</Link></li>
-          <li className={styles.li}><Link to='/contact'>Contact</Link></li>
+      <nav className='column'>
+        <ul className='columns'>
+          <li className={`column ${styles.li}`}><Link to='/platform'>Platform</Link></li>
+          <li className={`column ${styles.li}`}><Link to='/about'>About</Link></li>
+          <li className={`column ${styles.li}`}><Link to='/events'>Events</Link></li>
+          <li className={`column ${styles.li}`}><Link to='/contact'>Contact</Link></li>
         </ul>
       </nav>
     </div>

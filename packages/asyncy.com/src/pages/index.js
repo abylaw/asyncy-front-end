@@ -28,14 +28,26 @@ const IndexPage = ({ data }) => (
         <subtitle>
           The choreographed microservice platform for rapid application development.
         </subtitle>
-        <div style={{
-          margin: '40px 0 0 0',
+        <div className='columns is-variable is-1' style={{
+          maxWidth: '500px',
+          margin: '40px auto 0 auto',
         }}>
-          <input type='text' placeholder='Email address' style={{
-            marginRight: '10px',
-            width: '420px',
-          }}/>
-          <button className='primary'>Get notified</button>
+          <div className='column' style={{
+            paddingTop: 0,
+            paddingBottom: 0,
+          }}>
+            <input type='text' placeholder='Email address' style={{
+              width: '100%',
+            }}/>
+          </div>
+          <div className='column is-one-third' style={{
+            paddingTop: 0,
+            paddingBottom: 0,
+          }}>
+            <button style={{
+              width: '100%'
+            }} className='primary'>Get notified</button>
+        </div>
         </div>
       </div>
     </div>
@@ -73,7 +85,7 @@ const IndexPage = ({ data }) => (
     }}>
       <h2>Learn with the community</h2>
       <div style={{
-        width: '800px',
+        maxWidth: '800px',
         margin: '40px auto',
 
       }}>
@@ -138,25 +150,29 @@ const IndexPage = ({ data }) => (
       marginTop: 0,
       width: '100vw',
       marginLeft: '-25px',
-      paddingBottom: '100px',
-      paddingTop: '45px',
+      padding: '45px 25px 100px 25px',
       textAlign: 'center',
       backgroundColor: '#2D2D2D',
     }}>
       <h2>Open Source</h2>
       <p>Run Asyncy in any environment. Locally, or on our hosted cloud.</p>
 
-      <div style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-evenly',
-        width: '80%',
-        margin: '35px auto 0 auto',
+      <div className='columns' style={{
+        maxWidth: '1000px',
+        margin: '0 auto',
       }}>
-        <img src={digitalOceanLogo}/>
-        <img src={googleLogo}/>
-        <img src={amazonLogo}/>
-        <img src={microsoftLogo}/>
+        <div className='column'>
+          <img src={digitalOceanLogo}/>
+        </div>
+        <div className='column'>
+          <img src={googleLogo}/>
+        </div>
+        <div className='column'>
+          <img src={amazonLogo}/>
+        </div>
+        <div className='column'>
+          <img src={microsoftLogo}/>
+        </div>
       </div>
     </section>
 
@@ -164,30 +180,46 @@ const IndexPage = ({ data }) => (
       margin: '15px auto',
       transform: 'translate(0, -50%)',
       textAlign: 'center',
-      width: '60%',
+      maxWidth: '800px',
       backgroundColor: '#00C584',
-      padding: '40px',
+      padding: '40px 15px',
       borderRadius: '4px',
       boxShadow: '0 1px 13px 0 rgba(0,0,0,0.5)',
 
     }}>
       <h4>Sign up to get updates</h4>
-      <input type="text" placeholder="Email address" style={{
-        backgroundColor: 'white',
-        color: 'grey',
-        marginRight: '10px',
-        width: '420px',
-        height: '48px',
-        boxShadow: '0px 1px 3px #4AB390',
-      }}/>
-      <button style={{
-         fontSize: '0.8em',
-         backgroundColor: '#008257',
-         color: 'white',
-         border: 'none',
-         bordeRadius: '6px',
-         padding: '12px 28px',
-      }}>Get notified</button>
+      <div className='columns is-variable is-1' style={{
+        maxWidth: '600px',
+        margin: '0 auto',
+      }}>
+        <div className='column' style={{
+          paddingTop: 0,
+          paddingBottom: 0,
+        }}>
+          <input type="text" placeholder="Email address" style={{
+            backgroundColor: 'white',
+            color: 'grey',
+            marginRight: '10px',
+            width: '100%',
+            height: '48px',
+            boxShadow: '0px 1px 3px #4AB390',
+          }}/>
+        </div>
+        <div className='column is-one-third' style={{
+          paddingTop: 0,
+          paddingBottom: 0,
+        }}>
+          <button style={{
+             width: '100%',
+             fontSize: '0.8em',
+             backgroundColor: '#008257',
+             color: 'white',
+             border: 'none',
+             bordeRadius: '6px',
+             padding: '12px 28px',
+          }}>Get notified</button>
+          </div>
+      </div>
     </div>
   </div>
 )

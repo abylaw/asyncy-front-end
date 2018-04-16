@@ -20,7 +20,8 @@ const AlternatingTwoColumn = ({ textData }) => (
             </code>
           </div>
           <div data-slot='right' style={{
-            padding: '40px 0px 40px 80px',
+            maxWidth: '490px',
+            marginLeft: 'auto',
           }}>
             <h2>{data.title}</h2>
             <p>{data.description}</p>
@@ -30,17 +31,18 @@ const AlternatingTwoColumn = ({ textData }) => (
         } else {
           return <TwoColumn key={index}>
           <div data-slot='left' style={{
-            padding: '40px 0px 40px 80px',
+            maxWidth: '490px',
+            marginLeft: 'auto',
           }}>
             <h2>{data.title}</h2>
             <p>{data.description}</p>
             <button className='secondary'>{data.linkText}</button>
           </div>
           <div data-slot='right' style={{
-              width: '200px',
-              height: '200px',
-              margin: 'auto auto',
               backgroundColor: '#252525',
+              borderRadius: '7px',
+              padding: '25px',
+              height: '100%',
             }}>
           </div>
         </TwoColumn>
