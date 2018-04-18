@@ -35,8 +35,8 @@ const ContactPage = () => (
     }}>
       <div className='columns'>
       {
-        data.contacts.map(contact => (
-          <div className='column'>
+        data.contacts.map((contact, index) => (
+          <div className='column' key={index}>
             <div style={{
               backgroundColor: '#262626',
               borderRadius: '4px',

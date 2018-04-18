@@ -214,8 +214,8 @@ const IndexPage = () => (
         margin: '0 auto 35px auto',
       }}>
         {
-          data.opensource.logos.map((logo) => (
-            <div className='column' style={{
+          data.opensource.logos.map((logo, index) => (
+            <div className='column' key={index} style={{
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',

@@ -64,8 +64,8 @@ const AboutPage = () => (
           marginTop: '40px',
         }}>
           {
-            data.teamMembers.map((member) => (
-              <div className='column'>
+            data.teamMembers.map((member, index) => (
+              <div className='column' key={index}>
                 <TeamMember name={member.name} role={member.role} twitterHandle={member.twitter} images={member.images}/>
               </div>
             ))
