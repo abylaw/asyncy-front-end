@@ -2,12 +2,21 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Hero from '../components/Hero'
 import AlternatingTwoColumn from '../components/AlternatingTwoColumn'
+
+import listIcon from '../assets/icon_list.svg'
+import circleIcon from '../assets/icon_circle.svg'
+import squareIcon from '../assets/icon_square.svg'
 import placeholder from '../assets/placeholder.svg'
 
 const textData = [
   {
     title: 'Hub',
     description: 'The Asyncy Hub is the service discovery frontend. Developers can submit services in the form of Docker containers, functions or Storyscripts. Public and private services coexist in the Hub as a central registry for discovery and documentation.',
+    items: [
+      { icon: circleIcon, text: 'Hundreds of open source services' },
+      { icon: squareIcon, text: 'Premium subscription based services' },
+      { icon: listIcon, text: 'Anonymous, cross-application metrics' },
+    ],
     image: placeholder,
   },
   {
@@ -41,7 +50,7 @@ const PlatformPage = ({ data }) => (
     <section className='section' style={{
       maxWidth: '1100px',
     }}>
-      <AlternatingTwoColumn start='left' textData={textData} />
+      <AlternatingTwoColumn reversed={true} textData={textData} />
     </section>
     
     <section className='section' style={{
