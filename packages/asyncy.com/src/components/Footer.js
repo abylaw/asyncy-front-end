@@ -24,7 +24,9 @@ const Footer = () => (
           <li className={styles.li}><Link to='/'>Overview</Link></li>
           <li className={styles.li}><Link to='/'>Storyscript</Link></li>
           <li className={styles.li}><Link to='/'>FAQ</Link></li>
-          <li className={styles.li}><Link to='/'>Give Feedback</Link></li>
+          <li className={styles.li}>
+            <a onClick={() => window.typeform.feedback.open()}>Give Feedback</a>
+          </li>
         </ul>
       </nav>
       <nav className='column'>

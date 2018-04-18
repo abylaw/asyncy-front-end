@@ -50,7 +50,7 @@ const ContactPage = () => (
                 <h4>{contact.title}</h4>
               </div>
               <p>{contact.description}</p>
-              <a href={contact.link}>
+              <a onClick={() => window.typeform.contact.open()}>
                 <button className='secondary' style={{
                   marginTop: '1em',
                   width: '100%',

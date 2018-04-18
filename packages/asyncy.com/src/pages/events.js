@@ -54,7 +54,7 @@ const EventPage = () => (
         <div className='column is-three-quarters'>
           {
             data.events.map((event, index) => {
-              return <div className='columns' style={{
+              return <div className='columns' key={index} style={{
                 padding: '2.2em 0',
                 borderBottom: (index === data.events.length - 1) ? 'none' : '1px solid #41434A'
               }}>
@@ -106,8 +106,8 @@ const EventPage = () => (
             listStyle: 'none',
           }}>
           {
-            data.learningEvents.map((event) => (
-              <li style={{
+            data.learningEvents.map((event, index) => (
+              <li key={index} style={{
                 marginBottom: '1em',
               }}>
                 <a href={event.link} style={{ color: '#00AAFF' }}>
