@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link from '../components/Link'
 
 import styles from './Footer.module.css'
 import slack from '../assets/slack_logo.svg'
@@ -21,9 +21,9 @@ const Footer = () => (
       <nav className='column'>
         <div className={styles.menuHeader}>Product</div>
         <ul className={styles.ul}>
-          <li className={styles.li}><Link to='/'>Overview</Link></li>
-          <li className={styles.li}><Link to='/'>Storyscript</Link></li>
-          <li className={styles.li}><Link to='/'>FAQ</Link></li>
+          <li className={styles.li}><Link to='/platform'>Overview</Link></li>
+          <li className={styles.li}><Link to='https://docs.asyncy.com/#storyscript'>Storyscript</Link></li>
+          <li className={styles.li}><Link to='/faq'>FAQ</Link></li>
           <li className={styles.li}>
             <a onClick={() => window.typeform.feedback.open()}>Give Feedback</a>
           </li>
@@ -32,39 +32,44 @@ const Footer = () => (
       <nav className='column'>
         <div className={styles.menuHeader}>Support</div>
         <ul className={styles.ul}>
-          <li className={styles.li}><Link to='/'>Slack</Link></li>
-          <li className={styles.li}><Link to='/'>Github Issues</Link></li>
+          <li className={styles.li}><Link to='http://asyncy.click/slack'>Slack</Link></li>
+          <li className={styles.li}><Link to='https://github.com/asyncy'>Github Issues</Link></li>
         </ul>
       </nav>
       <nav className='column'>
         <div className={styles.menuHeader}>Resources</div>
         <ul className={styles.ul}>
-          <li className={styles.li}><Link to='/'>Events</Link></li>
-          <li className={styles.li}><Link to='/'>Press</Link></li>
+          <li className={styles.li}><Link to='/events'>Events</Link></li>
         </ul>
       </nav>
       <nav className='column'>
         <div className={styles.menuHeader}>Company</div>
         <ul className={styles.ul}>
-          <li className={styles.li}><Link to='/'>About</Link></li>
-          <li className={styles.li}><Link to='/'>Jobs</Link></li>
-          <li className={styles.li}><Link to='/'>Contact</Link></li>
-          <li className={styles.li}><Link to='/'>Partners</Link></li>
+          <li className={styles.li}><Link to='/about'>About</Link></li>
+          <li className={styles.li}><Link to='https://angel.co/asyncy/jobs'>Jobs</Link></li>
+          <li className={styles.li}><Link to='/contact'>Contact</Link></li>
+          <li className={styles.li}><a onClick={() => window.typeform.partners.open()}>Partners</a></li>
         </ul>
       </nav>
       <div className='column'>
-        <img src={slack} style={{
-          width: '30px',
-          marginLeft: '20px',
-        }}/>
-        <img src={github} style={{
-          width: '30px',
-          marginLeft: '25px',
-        }}/>
-        <img src={twitter} style={{
-          width: '30px',
-          marginLeft: '25px',
-        }}/>
+        <Link to='http://asyncy.click/slack'>
+          <img src={slack} style={{
+            width: '30px',
+            marginLeft: '20px',
+          }}/>
+        </Link>
+        <Link to='https://github.com/asyncy'>
+          <img src={github} style={{
+            width: '30px',
+            marginLeft: '25px',
+          }}/>
+        </Link>
+        <Link to='https://twitter.com/asyncy'>
+          <img src={twitter} style={{
+            width: '30px',
+            marginLeft: '25px',
+          }}/>
+        </Link>
       </div>
     </div>
   </div>

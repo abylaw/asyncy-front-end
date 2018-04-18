@@ -21,14 +21,14 @@ const data = {
       title: 'Meet Storyscript',
       description: 'Inspired by the Zen of Python where functions are microservices, Storyscript is an high-level language that can be used to orchestrate microservices in an algorithmic way.',
       image: placeholder,
-      link: '/storyscript',
+      link: 'https://docs.asyncy.com/#storyscript',
       linkText: 'Learn More'
     },
     {
       title: 'Microservice choreography',
       description: 'Microservice Choreography is an architecture layer above orchestration eliminating service coupling and seperates logic from code with limited to no devops. Perfect for rapid application prototyping to production.',
       image: placeholder,
-      link: '/storyscript',
+      link: '/platform',
       linkText: 'Learn More'
     }
   ],

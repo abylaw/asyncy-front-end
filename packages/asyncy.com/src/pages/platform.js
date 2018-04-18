@@ -19,6 +19,7 @@ const textData = [
     title: 'Storyscript',
     description: 'A syntax-light, expressive and readable language that choreographs microservices. Think the Zen of Python with Docker built-in.',
     linkText: 'Read documentation',
+    link: 'https://docs.asyncy.com/#storyscript',
     image: placeholder,
   },
   {

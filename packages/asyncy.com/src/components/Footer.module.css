@@ -15,7 +15,7 @@
 .li a:hover {
   color: white;
   transition: color 0.3s ease;
- -webkit-transition: color 0.3s ease-out;
+  -webkit-transition: color 0.3s ease-out;
   -moz-transition: color 0.3s ease-out;
   -o-transition: color 0.3s ease-out;
   transition: color 0.3s ease-out;
