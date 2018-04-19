@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Hero from '../components/Hero'
 import AlternatingTwoColumn from '../components/AlternatingTwoColumn'
+import EmailForm from '../components/EmailForm'
 
 import appsIcon from '../assets/icon_apps.svg'
 import automationIcon from '../assets/icon_automation.svg'
@@ -63,7 +64,7 @@ const IndexPage = () => (
   <div>
     <div
       style={{
-        marginBottom: '120px',
+        marginBottom: '100px',
       }}
     >
       <div
@@ -72,32 +73,13 @@ const IndexPage = () => (
           textAlign: 'center',
         }}
       >
-        <h1>
-          {data.title}
-        </h1>
-        <subtitle>
-          {data.subtitle}
-        </subtitle>
-        <div className='columns is-variable is-1' style={{
+        <h1>{data.title}</h1>
+        <subtitle>{data.subtitle}</subtitle>
+        <div style={{
           maxWidth: '500px',
           margin: '40px auto 0 auto',
         }}>
-          <div className='column' style={{
-            paddingTop: 0,
-            paddingBottom: 0,
-          }}>
-            <input type='text' placeholder='Email address' style={{
-              width: '100%',
-            }}/>
-          </div>
-          <div className='column is-one-third' style={{
-            paddingTop: 0,
-            paddingBottom: 0,
-          }}>
-            <button style={{
-              width: '100%'
-            }} className='primary'>Get notified</button>
-        </div>
+          <EmailForm/>
         </div>
       </div>
     </div>
@@ -249,43 +231,25 @@ const IndexPage = () => (
       textAlign: 'center',
       maxWidth: '800px',
       backgroundColor: '#00C584',
-      padding: '40px 15px',
+      padding: '40px 15px 10px 15px',
       borderRadius: '4px',
       boxShadow: '0 1px 13px 0 rgba(0,0,0,0.5)',
 
     }}>
       <h4>Sign up to get updates</h4>
-      <div className='columns is-variable is-1' style={{
+      <div style={{
         maxWidth: '600px',
         margin: '0 auto',
+        padding: '10px 0'
       }}>
-        <div className='column' style={{
-          paddingTop: 0,
-          paddingBottom: 0,
-        }}>
-          <input type="text" placeholder="Email address" style={{
-            backgroundColor: 'white',
-            color: 'grey',
-            marginRight: '10px',
-            width: '100%',
-            height: '48px',
-            boxShadow: '0px 1px 3px #4AB390',
-          }}/>
-        </div>
-        <div className='column is-one-third' style={{
-          paddingTop: 0,
-          paddingBottom: 0,
-        }}>
-          <button style={{
-             width: '100%',
-             fontSize: '0.8em',
-             backgroundColor: '#008257',
-             color: 'white',
-             border: 'none',
-             bordeRadius: '6px',
-             padding: '12px 28px',
-          }}>Get notified</button>
-          </div>
+        <EmailForm inputStyle={{
+          backgroundColor: 'white',
+          color: 'grey',
+          boxShadow: '0px 1px 3px #4AB390',
+        }} btnStyle={{
+          backgroundColor: '#008257',
+          color: 'white',
+        }}/>
       </div>
     </div>
   </div>

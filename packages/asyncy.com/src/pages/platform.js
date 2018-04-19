@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Hero from '../components/Hero'
+import EmailForm from '../components/EmailForm'
 import AlternatingTwoColumn from '../components/AlternatingTwoColumn'
 
 import listIcon from '../assets/icon_list.svg'
@@ -72,17 +73,10 @@ const PlatformPage = ({ data }) => (
       <div style={{
         textAlign: 'left'
       }}><h2>Sign up to get updates</h2></div>
-      <div className='columns is-variable is-1'>
-        <div className='column'>
-          <input type='text' placeholder='Your Email' style={{
-            width: '100%',
-          }}></input>
-        </div>
-        <div className='column is-one-third'>
-          <button className='primary' style={{
-            width: '100%',
-          }}>Sign up</button>
-        </div>
+      <div style={{
+        margin: '30px 0',
+      }}>
+        <EmailForm placeholder='Your Email' btnText='Sign up'/>
       </div>
     </section>
   </div>

@@ -6,6 +6,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-sass`,
     `gatsby-plugin-glamor`,
+    `gatsby-plugin-pageclip`,
     {
       resolve: `gatsby-plugin-typeform`,
       options: {

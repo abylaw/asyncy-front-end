@@ -44,8 +44,8 @@ const AlternatingTwoColumn = ({ reversed, textData }) => (
                 listStyle: 'none'
               }}>
                 {
-                  data.items.map((item) => (
-                    <li css={{
+                  data.items.map((item, index) => (
+                    <li key={index} css={{
                       height: '4em',
                       display: 'flex',
                       alignItems: 'center',
