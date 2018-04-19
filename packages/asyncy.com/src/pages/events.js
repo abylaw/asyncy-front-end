@@ -20,10 +20,10 @@ const data = {
     {
       title: 'Asyncy Launch Party',
       description: 'Join us for the official beta launch of Asyncy. Meet the team, launch your first applications and boat around the canals!',
-      date: 'October 2018',
+      date: 'Late September 2018',
       image: placeholderEventImage,
       location: 'Amsterdam',
-      link: '/'
+      onClick: () => window.typeform.launchparty.open(),
     }
   ],
   learningEvents: [
@@ -87,7 +87,7 @@ const EventPage = () => (
                   <p>
                     {event.description}
                   </p>
-                  <a href={event.link}>
+                  <a onClick={event.onClick} href={event.link}>
                     <button className='secondary'>
                       RSVP
                     </button>

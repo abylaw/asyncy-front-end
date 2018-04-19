@@ -14,6 +14,7 @@ module.exports = {
           feedback: 'deaLvw',
           contact: 'GAr52V',
           partners: 'TgCuNU',
+          launchparty: 'ySbpV8',
         },
         domain: 'asyncy',
       }

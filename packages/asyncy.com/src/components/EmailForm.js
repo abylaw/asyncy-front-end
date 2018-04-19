@@ -1,7 +1,7 @@
 import React from 'react'
 
 const EmailForm = ({ placeholder, inputStyle, btnText, btnStyle }) => (
-  <form className='pageclip-form' action='https://send.pageclip.co/VSuSIkbLeTA5qSPpr4qg54xqCJoJcIXn/index' method='post' style={{
+  <form className='pageclip-form' action='https://send.pageclip.co/kPrlBqjZJ6s7Fjj4yU1GLwTjIUwQZYwj' method='post' style={{
     marginBottom: 0,
   }}>
     <div className='columns is-variable is-1' style={{
