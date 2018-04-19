@@ -1,7 +1,14 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import styles from './Header.module.css'
+import styles from './Header.module.scss'
 import logo from '../assets/logo.svg'
+
+const toggleMenu = () => {
+  const e = document.getElementById('toggle-menu');
+
+  console.log(e);
+  e.checked = !e.checked;
+}
 
 const Header = () => (
   <div
@@ -18,18 +25,36 @@ const Header = () => (
         padding: '0 25px',
       }}
     >
-      <div className={`${styles.logoContainer} column is-half`}>
-        <Link to='/'><img src={logo}/></Link>
+      <div className='column is-half'>
+        <div className='columns is-mobile'>
+          <div className='column'>
+            <Link to='/'><img src={logo}/></Link>
+          </div>
+          <div className='column is-narrow is-hidden-tablet'>
+            <div style={{
+              fontSize: '32px',
+              lineHeight: '20px',
+              verticalAlign: 'top',
+            }}>
+              <a onClick={toggleMenu}>☰</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <nav className='column'>
-        <ul className='columns'>
-          <li className={`column ${styles.li}`}><Link to='/platform'>Platform</Link></li>
-          <li className={`column ${styles.li}`}><Link to='/about'>About</Link></li>
-          <li className={`column ${styles.li}`}><Link to='/events'>Events</Link></li>
-          <li className={`column ${styles.li}`}><Link to='/contact'>Contact</Link></li>
-        </ul>
-      </nav>
+      <div className={`column ${styles.checkbox}`}>
+        <input type='checkbox' id='toggle-menu' style={{ display: 'none' }}/>
+        <nav className={styles.navbar}>
+          <ul className='columns' css={{
+            textAlign: 'center'
+          }}>
+            <li className='column'><Link to='/platform'>Platform</Link></li>
+            <li className='column'><Link to='/about'>About</Link></li>
+            <li className='column'><Link to='/events'>Events</Link></li>
+            <li className='column'><Link to='/contact'>Contact</Link></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </div>
 )

@@ -47,7 +47,7 @@ const data = {
       title: 'Integration',
       description: 'Seamlessly connect services and applications with reusable containers. Perfect for devops, webhooks and bots.',
       icon: integrationIcon,
-    }
+    },
   ],
   community: {
     title: 'Learn with the community',
@@ -110,15 +110,24 @@ const IndexPage = () => (
       <div className='columns'>
         {
           data.usecases.map((usecase, index) => {
-            return <div className='column' key={index}>
+            return <div className='column' key={index} css={{
+              '@media (max-width: 768px)': {
+                textAlign: 'center',
+                marginBottom: '1em',
+              },
+            }}>
               <img src={usecase.icon} style={{
                 marginBottom: '0.8em',
               }}/>
               <h3>{usecase.title}</h3>
-              <p style={{
-                width: '320px',
+              <p css={{
+                maxWidth: '320px',
                 fontSize: '1em',
                 lineHeight: '1.95em',
+                '@media (max-width: 768px) and (min-width: 400px)': {
+                  maxWidth: '500px',
+                  margin: '0 auto',
+                }
               }}>
                 {usecase.description}</p>
             </div>;
@@ -136,12 +145,12 @@ const IndexPage = () => (
       paddingTop: '45px',
     }}>
       <h2>{data.community.title}</h2>
-      <div style={{
+      <div className='columns' style={{
         maxWidth: '800px',
+        padding: '0 25px',
         margin: '40px auto',
-
       }}>
-        <div style={{
+        <div css={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr 1fr',
           gridTemplateRows: '1fr 1fr 1fr 1fr 1fr',
@@ -149,48 +158,53 @@ const IndexPage = () => (
           gridColumnGap: '33px',
           width: '100%',
           height: '400px',
+          '@media(max-width: 600px)': {
+            gridTemplateColumns: '1fr',
+            gridTemplateRows: '1fr 1fr 1fr 1fr',
+            height: 'auto',
+          }
         }}>
-          <div style={{
+          <div css={{
             background: 'white',
             borderRadius: '7px',
             boxShadow: '0 1px 9px 0 #333CBE',
-            gridColumnStart: 1,
-            gridColumnEnd: 3,
-            gridRowStart: 1,
-            gridRowEnd: 4,
+            gridArea: '1 / 1 / 4 / 3',
+            '@media(max-width: 600px)': {
+              gridArea: '1 / 1 / 2 / 2',
+            }
           }}>
             hello
           </div>
-          <div style={{
+          <div css={{
             background: 'white',
             borderRadius: '7px',
             boxShadow: '0 1px 9px 0 #333CBE',
-            gridColumnStart: 3,
-            gridColumnEnd: 3,
-            gridRowStart: 1,
-            gridRowEnd: 3,
+            gridArea: '3 / 3 / 1 / 3',
+            '@media(max-width: 600px)': {
+              gridArea: '2 / 1 / 3 / 2',
+            }
           }}>
             hello
           </div>
-          <div style={{
+          <div css={{
             background: 'white',
             borderRadius: '7px',
             boxShadow: '0 1px 9px 0 #333CBE',
-            gridColumnStart: 1,
-            gridColumnEnd: 3,
-            gridRowStart: 4,
-            gridRowEnd: 6,
+            gridArea: '4 / 1 / 6 / 3',
+            '@media(max-width: 600px)': {
+              gridArea: '3 / 1 / 4 / 2',
+            }
           }}>
             hello
           </div>
-          <div style={{
+          <div css={{
             background: 'white',
             borderRadius: '7px',
             boxShadow: '0 1px 9px 0 #333CBE',
-            gridColumnStart: 3,
-            gridColumnEnd: 3,
-            gridRowStart: 3,
-            gridRowEnd: 6,
+            gridArea: '3 / 3 / 6 / 3',
+            '@media(max-width: 600px)': {
+              gridArea: '4 / 1 / 5 / 2',
+            }
           }}>
             hello
           </div>

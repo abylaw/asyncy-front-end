@@ -4,8 +4,11 @@ import Link from 'gatsby-link'
 import twitterLogo from '../assets/twitter_logo.svg'
 
 const TeamMember = ({name, role, twitterHandle, images}) => (
-  <div className='column' style={{
+  <div className='column' css={{
     alignSelf: 'flex-start',
+    '@media (max-width: 768px)': {
+      textAlign: 'center'
+    }
   }}>
     <div style={{
       width: '215px',
@@ -15,6 +18,7 @@ const TeamMember = ({name, role, twitterHandle, images}) => (
       gridTemplateRows: '1fr 1fr',
       gridRowGap: '15px',
       gridColumnGap: '15px',
+      margin: '0 auto',
     }}>
       <div style={{marginBottom: 0, gridColumnStart: 1, gridColumnEnd: 1, gridRowStart: 1, gridRowEnd: 1}}>
         <img src={images[0]} style={{ marginBottom: 0 }}/>

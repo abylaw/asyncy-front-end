@@ -1,0 +1,22 @@
+@import "../../node_modules/bulma/sass/utilities/_all";
+
+.checkbox {
+  input[type=checkbox]:checked ~ nav {
+    height: auto;
+    max-height: 300px;
+  }
+
+  input[type=checkbox]:not(:checked) ~ nav {
+    max-height: 0;
+  }
+}
+
+.navbar {
+  transition: max-height 0.2s ease-in;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    overflow: hidden;
+  }
+}

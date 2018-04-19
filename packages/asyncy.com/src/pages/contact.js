@@ -38,6 +38,8 @@ const ContactPage = () => (
         data.contacts.map((contact, index) => (
           <div className='column' key={index}>
             <div style={{
+              maxWidth: '420px',
+              margin: '0 auto',
               backgroundColor: '#262626',
               borderRadius: '4px',
               padding: '40px 34px 24px 34px',
