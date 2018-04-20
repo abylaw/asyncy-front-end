@@ -7,6 +7,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-glamor`,
     `gatsby-plugin-pageclip`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-typeform`,
       options: {
@@ -23,6 +24,13 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography.js`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content`,
+        name: 'markdown-pages',
       },
     },
   ],

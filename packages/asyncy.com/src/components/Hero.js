@@ -4,6 +4,7 @@ import Link from 'gatsby-link'
 const Hero = ({ title, subtitle }) => (
   <div
     style={{
+      marginTop: '45px',
       marginBottom: '70px',
     }}
   >

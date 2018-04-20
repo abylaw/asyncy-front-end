@@ -10,7 +10,8 @@ const Footer = () => (
   <div
     style={{
       fontSize: '0.9em',
-      marginBottom: '45px',
+      marginTop: '75px',
+      marginBottom: '55px',
     }}
   >
     <div className='columns' style={{

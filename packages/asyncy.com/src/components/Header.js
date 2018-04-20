@@ -13,8 +13,8 @@ const toggleMenu = () => {
 const Header = () => (
   <div
     style={{
-      marginTop: '2em',
-      marginBottom: '2rem',
+      marginTop: '25px',
+      marginBottom: '25px',
     }}
   >
     <div
@@ -25,10 +25,14 @@ const Header = () => (
         padding: '0 25px',
       }}
     >
-      <div className='column is-half'>
+      <div className='column is-half' style={{
+        padding: 0,
+      }}>
         <div className='columns is-mobile'>
           <div className='column'>
-            <Link to='/'><img src={logo}/></Link>
+            <Link to='/'><img src={logo} style={{
+              margin: 0,
+            }}/></Link>
           </div>
           <div className='column is-narrow is-hidden-tablet'>
             <div style={{
@@ -42,11 +46,13 @@ const Header = () => (
         </div>
       </div>
 
-      <div className={`column ${styles.checkbox}`}>
+      <div className={`column ${styles.checkbox}`} style={{
+        padding: 0,
+      }}>
         <input type='checkbox' id='toggle-menu' style={{ display: 'none' }}/>
         <nav className={styles.navbar}>
-          <ul className='columns' css={{
-            textAlign: 'center'
+          <ul className='columns' style={{
+            textAlign: 'center',
           }}>
             <li className='column'><Link to='/platform'>Platform</Link></li>
             <li className='column'><Link to='/about'>About</Link></li>
