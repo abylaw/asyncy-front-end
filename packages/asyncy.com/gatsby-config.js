@@ -33,5 +33,14 @@ module.exports = {
         name: 'markdown-pages',
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'TRACKING_ID',
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+      },
+    },
   ],
 }
