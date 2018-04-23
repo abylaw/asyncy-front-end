@@ -15,12 +15,12 @@ import digitalOceanLogo from '../assets/digital_ocean_logo.svg'
 import placeholder from '../assets/placeholder.svg'
 
 const data = {
-  title: 'Write stores, then code.',
+  title: 'Write stories, then code.',
   subtitle: 'The choreographed microservice platform for rapid application development.',
   sections: [
     {
       title: 'Meet Storyscript',
-      description: 'Inspired by the Zen of Python where functions are microservices, Storyscript is an high-level language that can be used to orchestrate microservices in an algorithmic way.',
+      description: 'Inspired by the Zen of Python where functions are microservices, Storyscript is a high-level language that can be used to orchestrate microservices in an algorithmic way.',
       image: placeholder,
       link: 'https://docs.asyncy.com/#storyscript',
       linkText: 'Learn More'
