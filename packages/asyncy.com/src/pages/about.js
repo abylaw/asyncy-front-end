@@ -2,12 +2,15 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Hero from '../components/Hero'
 import TeamMember from '../components/TeamMember'
+import PageBackground from '../components/PageBackground'
 
 import placeholder from '../assets/placeholder.svg'
 
 import steve from '../assets/Steve.png'
 import jerrod from '../assets/Jerrod.png'
 import whitney from '../assets/Whitney.png'
+import headerLeft from '../assets/about-header-left.svg'
+import headerRight from '../assets/about-header-right.svg'
 
 const data = {
   title: 'About Us',
@@ -42,9 +45,11 @@ const data = {
 
 const AboutPage = () => (
   <div>
+    <PageBackground leftImage={headerLeft} rightImage={headerRight}/>
     <Hero title={data.title} subtitle={data.subtitle}></Hero>
 
     <div style={{
+      marginTop: '100px',
       maxWidth: '780px',
       marginLeft: 'auto',
       marginRight: 'auto',
