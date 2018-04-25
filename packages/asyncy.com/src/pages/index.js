@@ -13,6 +13,7 @@ import microsoftLogo from '../assets/microsoft_logo.svg'
 import amazonLogo from '../assets/amazon_logo.svg'
 import digitalOceanLogo from '../assets/digital_ocean_logo.svg'
 import placeholder from '../assets/placeholder.svg'
+import bg from '../assets/purple-bg-pattern.svg'
 
 const data = {
   title: 'Write stories, then code.',
@@ -65,7 +66,7 @@ const IndexPage = () => (
     <div
       style={{
         marginTop: '65px',
-        marginBottom: '100px',
+        marginBottom: '55px',
       }}
     >
       <div
@@ -80,17 +81,39 @@ const IndexPage = () => (
           maxWidth: '500px',
           margin: '40px auto 0 auto',
         }}>
-          <EmailForm/>
+          <EmailForm btnStyle={{
+            backgroundColor: 'white',
+            color: 'black',
+          }}/>
         </div>
       </div>
     </div>
 
-    <section className='section'>
-      <AlternatingTwoColumn textData={data.sections} />
+    <section style={{
+      backgroundImage: `url(${bg})`,
+      backgroundColor: '#7A33D7',
+      width: '100vw',
+      marginLeft: '-25px',
+      padding: '1px 25px',
+    }}>
+      <div style={{
+        maxWidth: '1000px',
+        margin: '0 auto',
+      }}>
+        <AlternatingTwoColumn textData={data.sections} />
+      </div>
     </section>
 
-    <section className='section'>
-      <div className='columns'>
+    <section style={{
+      backgroundColor: '#21223A',
+      width: '100vw',
+      marginLeft: '-25px',
+      padding: '100px 25px',
+    }}>
+      <div className='columns' style={{
+        maxWidth: '1200px',
+        margin: '0 auto',
+      }}>
         {
           data.usecases.map((usecase, index) => {
             return <div className='column' key={index} css={{
@@ -117,117 +140,96 @@ const IndexPage = () => (
           })
         }
       </div>
-    </section>
 
-    <div style={{
-      textAlign: 'center',
-      backgroundColor: '#515CF9',
-      width: '100vw',
-      marginLeft: '-25px',
-      paddingBottom: '45px',
-      paddingTop: '45px',
-    }}>
-      <h2>{data.community.title}</h2>
-      <div className='columns' style={{
-        maxWidth: '800px',
-        padding: '0 25px',
-        margin: '40px auto',
+      <div style={{
+        textAlign: 'center',
+        marginTop: '90px',
       }}>
-        <div css={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr 1fr',
-          gridTemplateRows: '1fr 1fr 1fr 1fr 1fr',
-          gridRowGap: '15px',
-          gridColumnGap: '33px',
-          width: '100%',
-          height: '400px',
-          '@media(max-width: 600px)': {
-            gridTemplateColumns: '1fr',
-            gridTemplateRows: '1fr 1fr 1fr 1fr',
-            height: 'auto',
-          }
+        <h2>{data.community.title}</h2>
+        <div className='columns' style={{
+          maxWidth: '800px',
+          padding: '0 25px',
+          margin: '40px auto 60px auto',
         }}>
           <div css={{
-            background: 'white',
-            borderRadius: '7px',
-            boxShadow: '0 1px 9px 0 #333CBE',
-            gridArea: '1 / 1 / 4 / 3',
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr 1fr',
+            gridTemplateRows: '1fr 1fr 1fr 1fr 1fr',
+            gridRowGap: '15px',
+            gridColumnGap: '33px',
+            width: '100%',
+            height: '400px',
             '@media(max-width: 600px)': {
-              gridArea: '1 / 1 / 2 / 2',
+              gridTemplateColumns: '1fr',
+              gridTemplateRows: '1fr 1fr 1fr 1fr',
+              height: 'auto',
             }
           }}>
-            hello
-          </div>
-          <div css={{
-            background: 'white',
-            borderRadius: '7px',
-            boxShadow: '0 1px 9px 0 #333CBE',
-            gridArea: '3 / 3 / 1 / 3',
-            '@media(max-width: 600px)': {
-              gridArea: '2 / 1 / 3 / 2',
-            }
-          }}>
-            hello
-          </div>
-          <div css={{
-            background: 'white',
-            borderRadius: '7px',
-            boxShadow: '0 1px 9px 0 #333CBE',
-            gridArea: '4 / 1 / 6 / 3',
-            '@media(max-width: 600px)': {
-              gridArea: '3 / 1 / 4 / 2',
-            }
-          }}>
-            hello
-          </div>
-          <div css={{
-            background: 'white',
-            borderRadius: '7px',
-            boxShadow: '0 1px 9px 0 #333CBE',
-            gridArea: '3 / 3 / 6 / 3',
-            '@media(max-width: 600px)': {
-              gridArea: '4 / 1 / 5 / 2',
-            }
-          }}>
-            hello
+            <div css={{
+              background: '#3E455B',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              borderRadius: '7px',
+              boxShadow: '0 1px 8px 0 #21223A',
+              gridArea: '1 / 1 / 4 / 3',
+              '@media(max-width: 600px)': {
+                gridArea: '1 / 1 / 2 / 2',
+              }
+            }}>
+              Get started with Asyncy
+            </div>
+            <div css={{
+              background: '#3E455B',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              borderRadius: '7px',
+              boxShadow: '0 1px 8px 0 #21223A',
+              gridArea: '3 / 3 / 1 / 3',
+              '@media(max-width: 600px)': {
+                gridArea: '2 / 1 / 3 / 2',
+              }
+            }}>
+              Contribute on Github
+            </div>
+            <div css={{
+              background: '#3E455B',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              borderRadius: '7px',
+              boxShadow: '0 1px 8px 0 #21223A',
+              gridArea: '4 / 1 / 6 / 3',
+              '@media(max-width: 600px)': {
+                gridArea: '3 / 1 / 4 / 2',
+              }
+            }}>
+              Join a local event
+            </div>
+            <div css={{
+              background: '#3E455B',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              borderRadius: '7px',
+              boxShadow: '0 1px 8px 0 #21223A',
+              gridArea: '3 / 3 / 6 / 3',
+              '@media(max-width: 600px)': {
+                gridArea: '4 / 1 / 5 / 2',
+              }
+            }}>
+              Chat with us
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <section style={{
-      marginTop: 0,
-      width: '100vw',
-      marginLeft: '-25px',
-      padding: '45px 25px 100px 25px',
-      textAlign: 'center',
-      backgroundColor: '#2D2D2D',
-    }}>
-      <h2>{data.opensource.title}</h2>
-      <p>{data.opensource.description}</p>
-
-      <div className='columns' style={{
-        maxWidth: '1000px',
-        margin: '0 auto 35px auto',
-      }}>
-        {
-          data.opensource.logos.map((logo, index) => (
-            <div className='column' key={index} style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-              <img src={logo} style={{
-                marginBottom: 0,
-              }}/>
-            </div>
-          ))
-        }
-      </div>
     </section>
 
+
     <div style={{
-      margin: '15px auto',
+      margin: '0px auto',
       transform: 'translate(0, -50%)',
       textAlign: 'center',
       maxWidth: '800px',
@@ -237,7 +239,7 @@ const IndexPage = () => (
       boxShadow: '0 1px 13px 0 rgba(0,0,0,0.5)',
 
     }}>
-      <h4>Sign up to get updates</h4>
+      <h3>Sign up to get updates</h3>
       <div style={{
         maxWidth: '600px',
         margin: '0 auto',
