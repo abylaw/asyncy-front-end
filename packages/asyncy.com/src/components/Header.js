@@ -13,7 +13,7 @@ const toggleMenu = () => {
 const Header = () => (
   <div
     style={{
-      marginTop: '25px',
+      marginTop: '40px',
       marginBottom: '25px',
     }}
   >
@@ -53,6 +53,7 @@ const Header = () => (
         <nav className={styles.navbar}>
           <ul className='columns' style={{
             textAlign: 'center',
+            fontSize: '1.06em'
           }}>
             <li className='column'><Link to='/platform'>Platform</Link></li>
             <li className='column'><Link to='/about'>About</Link></li>

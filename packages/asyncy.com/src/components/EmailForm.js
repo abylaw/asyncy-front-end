@@ -15,12 +15,12 @@ const EmailForm = ({ placeholder, inputStyle, btnText, btnStyle }) => (
           width: '100%',
         }} style={inputStyle || {}} required/>
       </div>
-      <div className='column is-one-third' style={{
+      <div className='column is-narrow' style={{
         paddingTop: 0,
         paddingBottom: 0,
       }}>
         <button type='submit' style={btnStyle || {}} css={{
-          width: '100%'
+          width: '150px'
         }} className='primary button pageclip-form__submit'>
           <span>{ btnText || 'Get notified' }</span>
         </button>

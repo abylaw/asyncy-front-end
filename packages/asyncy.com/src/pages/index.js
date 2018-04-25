@@ -78,7 +78,7 @@ const IndexPage = () => (
         <h1>{data.title}</h1>
         <subtitle>{data.subtitle}</subtitle>
         <div style={{
-          maxWidth: '500px',
+          maxWidth: '560px',
           margin: '40px auto 0 auto',
         }}>
           <EmailForm btnStyle={{

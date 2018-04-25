@@ -25,9 +25,9 @@ const Hero = ({ title, subtitle }) => (
         margin: '25px auto 20px auto',
       }} />
       <div style={{
-        maxWidth: '650px',
+        maxWidth: '750px',
         fontSize: '1em',
-        lineHeight: '1.9em',
+        lineHeight: '1.7em',
         margin: '0 auto',
       }}>
         <subtitle>{subtitle}</subtitle>
