@@ -25,6 +25,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "postinstall": "for p in ./plugins/*; do (cd $p; npm install); done",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
