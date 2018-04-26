@@ -19,13 +19,13 @@ const PageBackground = ({ leftImage, rightImage }) => (
   <div css={{
     position: 'absolute',
     zIndex: '-1',
-    width: '550px',
+    width: '450px',
     height: '700px',
     overflow: 'hidden',
-    right: '-100px',
     top: '-170px',
+    right: '0px',
     '@media (max-width: 768px)': {
-      right: '-300px',
+      width: '250px',
     }
   }}>
     <div css={{
