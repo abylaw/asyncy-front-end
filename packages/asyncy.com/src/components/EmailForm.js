@@ -2,7 +2,7 @@ import React from 'react'
 
 const EmailForm = ({ placeholder, inputStyle, btnText, btnStyle }) => (
   <form className='pageclip-form' action='https://send.pageclip.co/kPrlBqjZJ6s7Fjj4yU1GLwTjIUwQZYwj' method='post' style={{
-    marginBottom: 0,
+    marginBottom: '16px',
   }}>
     <div className='columns is-variable is-1' style={{
       marginBottom: 0,
@@ -21,12 +21,11 @@ const EmailForm = ({ placeholder, inputStyle, btnText, btnStyle }) => (
       }}>
         <button type='submit' style={btnStyle || {}} css={{
           width: '150px'
-        }} className='primary button pageclip-form__submit'>
+        }} className='primary button pageclip-form__submit pageclip-form__submit--dark-loader'>
           <span>{ btnText || 'Get notified' }</span>
         </button>
       </div>
     </div>
-    <div className='pageclip-message' style={{ height: '1em' }}></div>
   </form>
 )
 
