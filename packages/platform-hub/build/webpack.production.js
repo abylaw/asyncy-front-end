@@ -14,7 +14,7 @@ const webpackConfig = {
       {
         test: /\.scss$/i,
         use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
+          fallback: 'vue-style-loader',
           // resolve-url-loader may be chained before sass-loader if necessary
           use: ['css-loader', 'sass-loader'],
         }),
@@ -22,7 +22,7 @@ const webpackConfig = {
       {
         test: /\.css$/i,
         use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
+          fallback: 'vue-style-loader',
           use: 'css-loader',
         }),
       },

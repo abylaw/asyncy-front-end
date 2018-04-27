@@ -23,6 +23,7 @@ const webpackConfig = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       vue$: 'vue/dist/vue.esm.js',
+      '@': path.resolve(__dirname, 'src/'),
     },
   },
   plugins: [
@@ -48,9 +49,6 @@ const webpackConfig = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: {
-          extractCSS: config.isProd,
-        },
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

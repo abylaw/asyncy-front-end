@@ -1,26 +1,34 @@
 <template>
   <div id="app">
-    <img src="../assets/logo.svg">
+    <app-header>
+    </app-header>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import AppHeader from './components/AppHeader';
+
 export default {
   name: 'app',
+  components: { AppHeader },
 };
 </script>
 
-<style>
+<style lang="scss">
+@import "../../node_modules/bulma/sass/utilities/_all";
+@import "../../node_modules/bulma/sass/grid/columns";
+@import "../../node_modules/bulma/sass/components/level";
+@import "../../node_modules/bulma/sass/grid/tiles";
+
 body {
-  background: #2c3e50;
+  margin: 0;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: white;
-  margin-top: 60px;
+  color: black;
 }
 </style>
