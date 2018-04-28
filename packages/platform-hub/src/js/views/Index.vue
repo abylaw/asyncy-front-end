@@ -3,8 +3,13 @@
     <div class="hero">
       <h1>Asyncy Hub</h1>
       <p>Service discovery and marketplace for Asyncy</p>
-
-      <input type="text" placeholder="Search Hub"></input>
+      <div class="search-bar-container">
+        <div class="field">
+          <div class="control">
+            <input type="text" class="input" placeholder="Search Hub">
+          </div>
+        </div>
+      </div>
       <p>Try topic:social, topic:machine-learning or stars:>100</p>
     </div>
 
@@ -56,12 +61,12 @@
           <div class="tile is-ancestor">
             <div class="tile is-parent is-vertical">
               <div v-for="r in recentlyAdded.slice(0, 3)" class="tile is-child">
-                <recently-added-tile :title="r.title" :description="r.description"></recently-added-tile>
+                <service-summary :title="r.title" :description="r.description"></service-summary>
               </div>
             </div>
             <div class="tile is-parent is-vertical">
               <div v-for="r in recentlyAdded.slice(3, 6)" class="tile is-child">
-                <recently-added-tile :title="r.title" :description="r.description"></recently-added-tile>
+                <service-summary :title="r.title" :description="r.description"></service-summary>
               </div>
             </div>
           </div>
@@ -105,7 +110,7 @@
 </template>
 
 <script>
-import RecentlyAddedTile from '../components/RecentlyAddedTile';
+import ServiceSummary from '../components/ServiceSummary';
 
 export default {
   name: 'index',
@@ -158,7 +163,7 @@ export default {
     };
   },
   components: {
-    RecentlyAddedTile,
+    ServiceSummary,
   },
 };
 </script>
@@ -178,6 +183,11 @@ ul {
   color: white;
   background: black;
   padding-bottom: 50px;
+}
+
+.search-bar-container {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .columns {
