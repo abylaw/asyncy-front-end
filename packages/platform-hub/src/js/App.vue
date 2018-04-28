@@ -19,10 +19,11 @@ export default {
 @import "../../node_modules/bulma/sass/utilities/_all";
 @import "../../node_modules/bulma/sass/base/helpers";
 @import "../../node_modules/bulma/sass/grid/columns";
-@import "../../node_modules/bulma/sass/components/level";
 @import "../../node_modules/bulma/sass/grid/tiles";
-@import "../../node_modules/bulma/sass/elements/tag";
+@import "../../node_modules/bulma/sass/components/level";
 @import "../../node_modules/bulma/sass/components/media";
+@import "../../node_modules/bulma/sass/elements/tag";
+@import "../../node_modules/bulma/sass/elements/box";
 @import "../../node_modules/bulma/sass/elements/form";
 
 body {
