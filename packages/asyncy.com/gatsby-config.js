@@ -8,7 +8,6 @@ module.exports = {
     `gatsby-plugin-glamor`,
     `gatsby-plugin-pageclip`,
     `gatsby-transformer-remark`,
-    `gatsby-plugin-paperform`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
