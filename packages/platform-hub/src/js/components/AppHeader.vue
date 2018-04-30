@@ -3,7 +3,9 @@
     <div class="level">
       <div class="level-left">
         <div>
-        <img src="../../assets/logo.svg"/>
+          <router-link to="/">
+            <img src="../../assets/logo.svg"/>
+          </router-link>
         </div>
       </div>
       <div class="level-right">

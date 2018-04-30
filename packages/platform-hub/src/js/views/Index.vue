@@ -6,7 +6,7 @@
       <div class="search-bar-container">
         <div class="field">
           <div class="control">
-            <input type="text" class="input" placeholder="Search Hub">
+            <search-bar/>
           </div>
         </div>
       </div>
@@ -40,16 +40,12 @@
       <div class="column">
         <div>
           <h2>Featured services</h2>
-          <div>
+          <div class="featured-services">
             <div class="tile is-ancestor">
-              <div class="tile is-parent">
-                <div class="image-placeholder tile is-child"></div>
-              </div>
-              <div class="tile is-parent">
-                <div class="image-placeholder tile is-child"></div>
-              </div>
-              <div class="tile is-parent">
-                <div class="image-placeholder tile is-child"></div>
+              <div class="tile is-parent" v-for="f in featured">
+                <router-link to="/service">
+                  <div class="image-placeholder tile is-child"></div>
+                </router-link>
               </div>
             </div>
           </div>
@@ -111,11 +107,23 @@
 
 <script>
 import ServiceSummary from '../components/ServiceSummary';
+import SearchBar from '../components/SearchBar';
 
 export default {
   name: 'index',
   data() {
     return {
+      featured: [
+        {
+          id: '123',
+        },
+        {
+          id: 'abv',
+        },
+        {
+          id: 'dddc',
+        },
+      ],
       recentlyAdded: [
         {
           title: 'Title',
@@ -164,6 +172,7 @@ export default {
   },
   components: {
     ServiceSummary,
+    SearchBar,
   },
 };
 </script>
@@ -201,6 +210,12 @@ ul {
   width: 100%;
   height: 150px;
   border-radius: 5px;
+}
+
+.featured-services {
+  a {
+    width: 100%;
+  }
 }
 
 .getting-started {

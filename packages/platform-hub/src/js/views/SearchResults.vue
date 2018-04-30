@@ -23,7 +23,7 @@
       </div>
       <div class="column is-7">
         <div>
-          <input class="input" type="text" placeholder="Search Hub">
+          <search-bar/>
           <p>Try topic:social or topic:machine-learning</p>
         </div>
 
@@ -56,6 +56,7 @@
 
 <script>
 import ServiceSummary from '../components/ServiceSummary';
+import SearchBar from '../components/SearchBar';
 
 export default {
   name: 'SearchResults',
@@ -93,6 +94,7 @@ export default {
   },
   components: {
     ServiceSummary,
+    SearchBar,
   },
 };
 </script>

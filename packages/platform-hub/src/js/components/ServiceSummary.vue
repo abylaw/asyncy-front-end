@@ -1,16 +1,18 @@
 <template>
-  <div class="media">
-    <div class="media-left">
-      <div class="recently-added-image"></div>
-    </div>
-    <div class="media-content">
-      <h4>{{ title }}</h4>
-      <p>{{ description }}</p>
-      <div v-if="tags" class="tag-container">
-        <div v-for="t in tags" class="tag">{{ t }}</div>
+  <router-link to="/service">
+    <div class="media">
+      <div class="media-left">
+        <div class="recently-added-image"></div>
+      </div>
+      <div class="media-content">
+        <h4>{{ title }}</h4>
+        <p>{{ description }}</p>
+        <div v-if="tags" class="tag-container">
+          <div v-for="t in tags" class="tag">{{ t }}</div>
+        </div>
       </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script scoped>
