@@ -9,6 +9,17 @@ module.exports = {
     `gatsby-plugin-pageclip`,
     `gatsby-transformer-remark`,
     {
+      resolve: `gatsby-plugin-typeform`,
+      options: {
+        forms: {
+          feedback: 'deaLvw',
+          contact: 'GAr52V',
+          partners: 'TgCuNU',
+          launchparty: 'ySbpV8',
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/content`,
