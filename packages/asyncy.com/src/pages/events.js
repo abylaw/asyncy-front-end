@@ -102,7 +102,7 @@ const EventPage = () => (
           <h5>Education & Training Events</h5>
 
           <ul style={{
-            marginLeft: 0,
+            paddingLeft: 0,
             listStyle: 'none',
           }}>
           {

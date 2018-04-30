@@ -23,6 +23,7 @@ const AlternatingTwoColumn = ({ reversed, textData }) => (
           }}>
             <img style={{
               marginBottom: 0,
+              width: '100%',
             }} src={data.image}/>
           </div>
         </div>

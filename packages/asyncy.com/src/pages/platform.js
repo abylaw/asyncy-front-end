@@ -62,7 +62,9 @@ const PlatformPage = ({ data }) => (
       <div style={{
         margin: '45px 0',
       }}>
-        <img src={placeholder} />
+        <img style={{
+          width: '100%',
+        }} src={placeholder} />
       </div>
     </section>
 
