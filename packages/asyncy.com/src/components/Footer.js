@@ -2,9 +2,9 @@ import React from 'react'
 import Link from '../components/Link'
 
 import styles from './Footer.module.css'
-import slack from '../assets/slack_logo.svg'
-import github from '../assets/github_logo.svg'
-import twitter from '../assets/twitter_logo.svg'
+import slack from '../assets/images/slack_logo.svg'
+import github from '../assets/images/github_logo.svg'
+import twitter from '../assets/images/twitter_logo.svg'
 
 const Footer = () => (
   <div
@@ -26,7 +26,7 @@ const Footer = () => (
           <li className={styles.li}><Link to='https://docs.asyncy.com/#storyscript'>Storyscript</Link></li>
           <li className={styles.li}><Link to='/faq'>FAQ</Link></li>
           <li className={styles.li}>
-            <a onClick={() => window.typeform.feedback.open()}>Give Feedback</a>
+            <a data-paperform-id='i6jslxy0' data-popup-button='1'>Give Feedback</a>
           </li>
         </ul>
       </nav>

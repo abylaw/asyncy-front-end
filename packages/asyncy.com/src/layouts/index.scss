@@ -3,13 +3,22 @@
 @import "../../node_modules/bulma/sass/grid/columns";
 @import "../../node_modules/bulma/sass/grid/tiles";
 @import "../../node_modules/bulma/sass/base/helpers";
+@import '../assets/fonts/1804-GFNGYO';
 
 body {
   background: black;
   color: white;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 1em;
+  font-family: Graphik Web,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
+  margin: 0;
+
+  *, *:before, *:after {
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+  }
 }
 
 .section {

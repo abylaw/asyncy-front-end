@@ -1,9 +1,9 @@
 import React from 'react'
 import Hero from '../components/Hero'
 
-import calendar from '../assets/icon_calendar.svg'
-import pin from '../assets/icon_pin.svg'
-import placeholderEventImage from '../assets/placeholder_event_image.svg'
+import calendar from '../assets/images/icon_calendar.svg'
+import pin from '../assets/images/icon_pin.svg'
+import placeholderEventImage from '../assets/images/placeholder_event_image.svg'
 
 const data = {
   title: 'Upcoming Events',

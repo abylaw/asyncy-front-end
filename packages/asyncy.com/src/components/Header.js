@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styles from './Header.module.scss'
-import logo from '../assets/logo.svg'
+import logo from '../assets/images/logo.svg'
 
 const toggleMenu = () => {
   const e = document.getElementById('toggle-menu');

@@ -40,7 +40,7 @@ const AlternatingTwoColumn = ({ reversed, textData }) => (
             { data.items &&
               <ul style={{
                 minWidth: '380px',
-                marginLeft: 0,
+                paddingLeft: 0,
                 listStyle: 'none'
               }}>
                 {

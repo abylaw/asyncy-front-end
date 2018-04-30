@@ -4,10 +4,10 @@ import Hero from '../components/Hero'
 import EmailForm from '../components/EmailForm'
 import AlternatingTwoColumn from '../components/AlternatingTwoColumn'
 
-import listIcon from '../assets/icon_list.svg'
-import circleIcon from '../assets/icon_circle.svg'
-import squareIcon from '../assets/icon_square.svg'
-import placeholder from '../assets/placeholder.svg'
+import listIcon from '../assets/images/icon_list.svg'
+import circleIcon from '../assets/images/icon_circle.svg'
+import squareIcon from '../assets/images/icon_square.svg'
+import placeholder from '../assets/images/placeholder.svg'
 
 const textData = [
   {

@@ -4,13 +4,13 @@ import Hero from '../components/Hero'
 import TeamMember from '../components/TeamMember'
 import PageBackground from '../components/PageBackground'
 
-import placeholder from '../assets/placeholder.svg'
+import placeholder from '../assets/images/placeholder.svg'
 
-import steve from '../assets/Steve.png'
-import jerrod from '../assets/Jerrod.png'
-import whitney from '../assets/Whitney.png'
-import headerLeft from '../assets/about-header-left.svg'
-import headerRight from '../assets/about-header-right.svg'
+import steve from '../assets/images/Steve.png'
+import jerrod from '../assets/images/Jerrod.png'
+import whitney from '../assets/images/Whitney.png'
+import headerLeft from '../assets/images/about-header-left.svg'
+import headerRight from '../assets/images/about-header-right.svg'
 
 const data = {
   title: 'About Us',

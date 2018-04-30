@@ -4,16 +4,16 @@ import Hero from '../components/Hero'
 import AlternatingTwoColumn from '../components/AlternatingTwoColumn'
 import EmailForm from '../components/EmailForm'
 
-import appsIcon from '../assets/icon_apps.svg'
-import automationIcon from '../assets/icon_automation.svg'
-import integrationIcon from '../assets/icon_integration.svg'
+import appsIcon from '../assets/images/icon_apps.svg'
+import automationIcon from '../assets/images/icon_automation.svg'
+import integrationIcon from '../assets/images/icon_integration.svg'
 
-import googleLogo from '../assets/google_logo.svg'
-import microsoftLogo from '../assets/microsoft_logo.svg'
-import amazonLogo from '../assets/amazon_logo.svg'
-import digitalOceanLogo from '../assets/digital_ocean_logo.svg'
-import placeholder from '../assets/placeholder.svg'
-import bg from '../assets/purple-bg-pattern.svg'
+import googleLogo from '../assets/images/google_logo.svg'
+import microsoftLogo from '../assets/images/microsoft_logo.svg'
+import amazonLogo from '../assets/images/amazon_logo.svg'
+import digitalOceanLogo from '../assets/images/digital_ocean_logo.svg'
+import placeholder from '../assets/images/placeholder.svg'
+import bg from '../assets/images/purple-bg-pattern.svg'
 
 const data = {
   title: 'Write stories, then code.',
@@ -237,9 +237,9 @@ const IndexPage = () => (
       padding: '40px 15px 10px 15px',
       borderRadius: '4px',
       boxShadow: '0 1px 13px 0 rgba(0,0,0,0.5)',
-
     }}>
-      <h3>Sign up to get updates</h3>
+      <h3 style={{
+      }}>Sign up to get updates</h3>
       <div style={{
         maxWidth: '600px',
         margin: '0 auto',

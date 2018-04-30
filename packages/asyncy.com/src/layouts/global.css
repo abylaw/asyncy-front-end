@@ -18,7 +18,7 @@ input {
   font-size:0.9em;
   border-radius: 6px;
   border: none;
-  padding: 12px 20px;
+  padding: 15px 20px;
   margin-bottom: 10px;
   background-color: rgba(255,255,255,0.14);
   color: white;
@@ -28,13 +28,14 @@ h1  {
   font-size: 2.6em;
   margin-bottom: 0.20em;
   font-weight: 400;
-  margin-top: 76px;
+  margin-top: 2.6em;
 }
 
 h2  {
   font-size: 2em;
   font-weight:300;
   margin-bottom: 0.5em;
+  margin-top: 0.5em;
   font-weight: 400;
 }
 
@@ -42,6 +43,7 @@ h3  {
   font-size: 2em;
   font-weight:300;
   margin-bottom: 0.7em;
+  margin-top: 0.2em;
   font-weight: 400;
 }
 
@@ -49,6 +51,7 @@ h4 {
   font-size: 1.2em;
   font-weight:300;
   margin-bottom: 0.7em;
+  margin-top: 0.2em;
   font-weight: 400;
 }
 
@@ -56,6 +59,7 @@ h5 {
   font-size: 1em;
   font-weight:300;
   margin-bottom: 0.9em;
+  margin-top: 0.2em;
   font-weight: 400;
 }
 
