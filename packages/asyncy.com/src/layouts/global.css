@@ -10,8 +10,8 @@ button {
   font-size: 0.8em;
   color: white;
   border: none;
+  padding: 5px 32px;
   border-radius: 6px;
-  padding: 9px 28px;
 }
 
 input {
@@ -77,8 +77,6 @@ subtitle {
 button.primary {
   color:white;
   background-color: #515CF9;
-  height: 47px;
-  padding: 3px 32px;
   text-align: center;
   font-size: 0.8em;
   font-weight: 600;
@@ -89,9 +87,6 @@ button.primary {
 button.secondary {
   color:black;
   background-color:white;
-  height: 48px;
-  width: 150px;
-  padding: 3px 32px;
   text-align: center;
   font-size: 0.9em;
   font-weight: 600;
