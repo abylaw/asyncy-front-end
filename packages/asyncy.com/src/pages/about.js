@@ -4,8 +4,6 @@ import Hero from '../components/Hero'
 import TeamMember from '../components/TeamMember'
 import PageBackground from '../components/PageBackground'
 
-import placeholder from '../assets/images/placeholder.svg'
-
 import steve from '../assets/images/Steve.png'
 import jerrod from '../assets/images/Jerrod.png'
 import whitney from '../assets/images/Whitney.png'
@@ -39,9 +37,11 @@ const data = {
   office: {
     title: 'Office',
     description: 'Our HQ is in Amsterdam, one of Europe’s fastest growing tech hubs; a city whose culture offers ideal work–life balance, cultivating a sustainable and energetic habitat.',
-    image: placeholder,
+    address: ['Hackers & Founders Building', 'Herengracht 504', '1017 CB Amsterdam'],
   }
 }
+
+const mapsQuery = `q=${encodeURIComponent(data.office.address.join(',').replace(/ /g, '+'))}`
 
 const AboutPage = () => (
   <div>
@@ -83,13 +83,40 @@ const AboutPage = () => (
         <p>
           {data.office.description} 
         </p>
-        <div style={{
-          margin: '45px 0',
-          textAlign: 'center',
+        <div className='level' css={{
+          maxWidth: '425px',
+          margin: '0 auto',
+          '@media(max-width: 768px)': {
+            textAlign: 'center',
+          },
         }}>
-          <img src={data.office.image} />
+          <div className='level-left'>
+            <p>{
+              data.office.address.map((line, key) => 
+                <span key={key}>{line}<br/></span>
+              )
+            }</p>
+          </div>
+          <div className='level-right'>
+            <a href={`https://www.google.com/maps/search/?api&${mapsQuery}`}>
+              <button className='secondary'>Get directions</button>
+            </a>
+          </div>
         </div>
       </section>
+    </div>
+    <div style={{
+      marginTop: '-65px',
+      marginBottom: '90px',
+      width: '100vw',
+      height: '425px',
+      marginLeft: '-30px',
+      textAlign: 'center',
+    }}>
+      <div style={{
+        width: '100%',
+        height: '100%',
+      }} id='map'></div>
     </div>
   </div>
 )
