@@ -65,7 +65,7 @@ const IndexPage = () => (
   <div>
     <div
       style={{
-        marginTop: '65px',
+        marginTop: '70px',
         marginBottom: '55px',
       }}
     >

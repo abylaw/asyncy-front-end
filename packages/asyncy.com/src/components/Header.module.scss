@@ -3,7 +3,7 @@
 .checkbox {
   input[type=checkbox]:checked ~ nav {
     height: auto;
-    max-height: 300px;
+    max-height: 375px;
   }
 
   input[type=checkbox]:not(:checked) ~ nav {
@@ -13,10 +13,28 @@
 
 .navbar {
   transition: max-height 0.2s ease-in;
+
+  a {
+    display: block;
+  }
 }
 
 @media (max-width: 768px) {
   .navbar {
     overflow: hidden;
+    margin: 0;
+
+    li:first-child a {
+      margin-top: 35px;
+    }
+
+    li {
+      font-size: 1.2em;
+      padding: 0;
+
+      a {
+        padding: 22px;
+      }
+    }
   }
 }

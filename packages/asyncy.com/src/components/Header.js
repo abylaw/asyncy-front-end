@@ -51,15 +51,23 @@ const Header = () => (
       }}>
         <input type='checkbox' id='toggle-menu' style={{ display: 'none' }}/>
         <nav className={styles.navbar}>
-          <ul className='columns' style={{
-            textAlign: 'center',
-            fontSize: '1.06em'
+          <div css={{
+            '@media (max-width: 768px)': {
+              padding: '0.75em',
+            }
           }}>
-            <li className='column'><Link to='/platform'>Platform</Link></li>
-            <li className='column'><Link to='/about'>About</Link></li>
-            <li className='column'><Link to='/events'>Events</Link></li>
-            <li className='column'><Link to='/contact'>Contact</Link></li>
-          </ul>
+            <ul className='columns' style={{
+              textAlign: 'center',
+              fontSize: '1.06em',
+              paddingLeft: '0',
+            }}>
+              <li className='column is-hidden-tablet'><Link to='/'>Home</Link></li>
+              <li className='column'><Link to='/platform'>Platform</Link></li>
+              <li className='column'><Link to='/about'>About</Link></li>
+              <li className='column'><Link to='/events'>Events</Link></li>
+              <li className='column'><Link to='/contact'>Contact</Link></li>
+            </ul>
+          </div>
         </nav>
       </div>
     </div>
