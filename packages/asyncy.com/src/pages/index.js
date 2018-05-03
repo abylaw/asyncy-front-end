@@ -79,7 +79,7 @@ const IndexPage = () => (
         <subtitle>{data.subtitle}</subtitle>
         <div style={{
           maxWidth: '560px',
-          margin: '40px auto 0 auto',
+          margin: '45px auto 0 auto',
         }}>
           <EmailForm btnStyle={{
             backgroundColor: 'white',
@@ -234,11 +234,12 @@ const IndexPage = () => (
       textAlign: 'center',
       maxWidth: '800px',
       backgroundColor: '#00C584',
-      padding: '40px 15px 10px 15px',
+      padding: '35px 15px 10px 15px',
       borderRadius: '4px',
       boxShadow: '0 1px 13px 0 rgba(0,0,0,0.5)',
     }}>
       <h3 style={{
+        marginBottom: '1.1em',
       }}>Sign up to get updates</h3>
       <div style={{
         maxWidth: '600px',
