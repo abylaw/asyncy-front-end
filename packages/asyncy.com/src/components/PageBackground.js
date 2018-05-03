@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PageBackground = ({ leftImage, rightImage }) => (
+const PageBackground = ({ leftImage, rightImage, leftX, leftY }) => (
   <div>
   <div css={{
     backgroundImage: `url(${leftImage})`,
@@ -10,8 +10,8 @@ const PageBackground = ({ leftImage, rightImage }) => (
     height: '700px',
     position: 'absolute',
     zIndex: '-1',
-    left: '-750px',
-    top: '-64px',
+    left: leftX || '-700px',
+    top: leftY || '-64px',
     '@media (max-width: 768px)': {
       left: '-950px',
     }

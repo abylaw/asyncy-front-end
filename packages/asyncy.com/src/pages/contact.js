@@ -1,5 +1,9 @@
 import React from 'react'
 import Hero from '../components/Hero'
+import PageBackground from '../components/PageBackground'
+
+import headerLeft from '../assets/images/contact-header-left.svg'
+import headerRight from '../assets/images/contact-header-right.svg'
 
 const data = {
   'title': 'Contact Us',
@@ -28,6 +32,13 @@ const data = {
 
 const ContactPage = () => (
   <div>
+    <PageBackground
+      leftImage={headerLeft}
+      rightImage={headerRight}
+      leftX={-500}
+      leftY={-150}
+    />
+
     <Hero title={data.title} subtitle={data.subtitle}></Hero>
 
     <section className='section' style={{
