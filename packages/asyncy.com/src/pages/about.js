@@ -110,7 +110,7 @@ const AboutPage = () => (
       marginBottom: '90px',
       width: '100vw',
       height: '425px',
-      marginLeft: '-30px',
+      marginLeft: '-25px',
       textAlign: 'center',
     }}>
       <div style={{
