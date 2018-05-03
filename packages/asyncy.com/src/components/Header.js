@@ -1,14 +1,28 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import styles from './Header.module.scss'
 import logo from '../assets/images/logo.svg'
 
-const toggleMenu = () => {
-  const e = document.getElementById('toggle-menu');
+const openMenu = () => {
+  const e = document.getElementById('mobile-menu');
 
-  console.log(e);
-  e.checked = !e.checked;
+  e.style.display = 'block'
 }
+
+const closeMenu = () => {
+  const e = document.getElementById('mobile-menu');
+
+  e.style.display = 'none'
+}
+
+const headerLinks = [
+  { text: 'Platform', to: '/platform' },
+  { text: 'About', to: '/about' },
+  { text: 'Events', to: '/events' },
+  { text: 'Contact', to: '/contact' },
+]
+
+const mobileHeaderLinks = headerLinks.slice()
+mobileHeaderLinks.unshift({ text: 'Home', to: '/'})
 
 const Header = () => (
   <div
@@ -40,34 +54,67 @@ const Header = () => (
               lineHeight: '20px',
               verticalAlign: 'top',
             }}>
-              <a onClick={toggleMenu}>☰</a>
+              <a onClick={openMenu}>☰</a>
             </div>
           </div>
         </div>
       </div>
 
-      <div className={`column ${styles.checkbox}`} style={{
+      <div id='mobile-menu' style={{
+        display: 'none',
+      }} css={{
+        position: 'fixed',
+        background: 'black',
+        textAlign: 'center',
+        width: '100vw',
+        height: '100vh',
+        left: 0,
+        top: 0,
+        padding: '23px',
+        zIndex: '3000',
+      }}>
+        <div style={{
+          width: '100%',
+          textAlign: 'right',
+          fontSize: '2em',
+          paddingBottom: '25px',
+        }}>
+          <a onClick={closeMenu}>✕</a>
+        </div>
+        <nav>
+          <ul className='columns' style={{
+            textAlign: 'center',
+            fontSize: '1.2em',
+            paddingLeft: '0',
+          }}>
+            {
+              mobileHeaderLinks.map((link, key) => 
+                <li className='column' key={key} style={{
+                  padding: '22px',
+                }}>
+                  <Link to={link.to} onClick={closeMenu}>{link.text}</Link>
+                </li>
+              )
+            }
+          </ul>
+        </nav>
+      </div>
+
+      <div className='column is-hidden-mobile' style={{
         padding: 0,
       }}>
-        <input type='checkbox' id='toggle-menu' style={{ display: 'none' }}/>
-        <nav className={styles.navbar}>
-          <div css={{
-            '@media (max-width: 768px)': {
-              padding: '0.75em',
-            }
+        <nav>
+          <ul className='columns' style={{
+            textAlign: 'center',
+            fontSize: '1.06em',
+            paddingLeft: '0',
           }}>
-            <ul className='columns' style={{
-              textAlign: 'center',
-              fontSize: '1.06em',
-              paddingLeft: '0',
-            }}>
-              <li className='column is-hidden-tablet'><Link to='/'>Home</Link></li>
-              <li className='column'><Link to='/platform'>Platform</Link></li>
-              <li className='column'><Link to='/about'>About</Link></li>
-              <li className='column'><Link to='/events'>Events</Link></li>
-              <li className='column'><Link to='/contact'>Contact</Link></li>
-            </ul>
-          </div>
+            {
+              headerLinks.map((link, key) => 
+                <li className='column' key={key}><Link to={link.to}>{link.text}</Link></li>
+              )
+            }
+          </ul>
         </nav>
       </div>
     </div>
