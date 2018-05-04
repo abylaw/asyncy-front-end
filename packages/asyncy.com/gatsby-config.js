@@ -192,7 +192,6 @@ module.exports = {
         forms: {
           feedback: 'deaLvw',
           contact: 'GAr52V',
-          partners: 'TgCuNU',
           launchparty: 'ySbpV8',
         },
       },

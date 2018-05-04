@@ -10,11 +10,13 @@
 
 .li a {
   color: #A3A3A3;
+  font-size: 0.95em;
+  line-height: 1.6em;
 }
 
 .li a:hover {
   color: white;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease-out;
   -webkit-transition: color 0.3s ease-out;
   -moz-transition: color 0.3s ease-out;
   -o-transition: color 0.3s ease-out;

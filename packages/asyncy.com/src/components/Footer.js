@@ -49,7 +49,6 @@ const Footer = () => (
           <li className={styles.li}><Link to='/about'>About</Link></li>
           <li className={styles.li}><Link to='https://angel.co/asyncy/jobs'>Jobs</Link></li>
           <li className={styles.li}><Link to='/contact'>Contact</Link></li>
-          <li className={styles.li}><a onClick={() => window.typeform.partners.open()}>Partners</a></li>
         </ul>
       </nav>
       <div className='column'>
