@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import logo from '../assets/images/logo.svg'
+import HeaderLink from './HeaderLink'
 
 const openMenu = () => {
   const e = document.getElementById('mobile-menu');
@@ -92,7 +93,7 @@ const Header = () => (
                 <li className='column' key={key} style={{
                   padding: '22px',
                 }}>
-                  <Link to={link.to} onClick={closeMenu}>{link.text}</Link>
+                  <HeaderLink to={link.to}>{link.text}</HeaderLink>
                 </li>
               )
             }
@@ -111,7 +112,9 @@ const Header = () => (
           }}>
             {
               headerLinks.map((link, key) => 
-                <li className='column' key={key}><Link to={link.to}>{link.text}</Link></li>
+                <li className='column' key={key}>
+                    <HeaderLink to={link.to}>{link.text}</HeaderLink>
+                </li>
               )
             }
           </ul>
