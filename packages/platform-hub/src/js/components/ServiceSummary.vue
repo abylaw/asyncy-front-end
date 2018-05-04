@@ -23,6 +23,10 @@ export default {
 </script>
 
 <style scoped>
+a {
+  color: black;
+}
+
 .recently-added-image {
   min-width: 65px;
   height: 65px;
@@ -45,5 +49,11 @@ p {
 
 .tag {
   margin-right: 0.4em;
+  font-size: 0.9em;
+  padding: 2px 14px;
+  border: 1px solid #404248;
+  background: white;
+  color: #040508;
+  opacity: 0.3;
 }
 </style>

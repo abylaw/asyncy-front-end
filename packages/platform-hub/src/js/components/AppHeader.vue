@@ -2,29 +2,34 @@
   <nav class="app-header">
     <div class="level">
       <div class="level-left">
-        <div>
-          <router-link to="/">
-            <img src="../../assets/logo.svg"/>
-          </router-link>
+        <router-link to="/">
+          <img src="../../assets/logo.svg"/>
+        </router-link>
+      </div>
+      <div class="level-item">
+        <div class="search-bar-container" v-if="hasSearchBar">
+          <search-bar></search-bar>
         </div>
       </div>
+      <div class="level-item"><a href="/">Explore</a></div>
+      <div class="level-item"><a href="https://inspiring-snyder-9c98ec.netlify.com/platform">Platform</a></div>
+      <div class="level-item"><a href="https://docs.asyncy.com">Documentation</a></div>
       <div class="level-right">
-        <div class="level-item"><a href="/">Explore</a></div>
-        <div class="level-item"><a href="/">Platform</a></div>
-        <div class="level-item"><a href="/">Documentation</a></div>
-        <div class="level-item">
-          <button class="button">
-            Submit a service
-          </button>
-        </div>
+        <button class="button">
+          Submit a service
+        </button>
       </div>
     </div>
   </nav>
 </template>
 
 <script>
+import SearchBar from './SearchBar';
+
 export default {
   name: 'AppHeader',
+  props: ['hasSearchBar'],
+  components: { SearchBar },
   data() {
     return {
       msg: 'Welcome to Your Vue.js App',
@@ -33,13 +38,28 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .level {
   max-width: 1100px;
   margin: 0 auto;
 }
+
+.search-bar-container {
+  width: 100%;
+  margin-right: 2em;
+  margin-left: 2em;
+}
+
+.level-item:not(:last-child) {
+  flex-grow: 1;
+
+  a {
+    color: white;
+  }
+}
+
 .app-header {
-  background-color: black;
-  padding: 25px;
+  background-color: #060717;
+  padding: 15px;
 }
 </style>

@@ -1,17 +1,12 @@
 <template>
-  <div id="app">
-    <app-header>
-    </app-header>
+  <div class="app">
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import AppHeader from './components/AppHeader';
-
 export default {
   name: 'app',
-  components: { AppHeader },
 };
 </script>
 
@@ -24,16 +19,29 @@ export default {
 @import "../../node_modules/bulma/sass/components/media";
 @import "../../node_modules/bulma/sass/elements/tag";
 @import "../../node_modules/bulma/sass/elements/box";
+@import "../../node_modules/bulma/sass/elements/button";
 @import "../../node_modules/bulma/sass/elements/form";
 
 body {
   margin: 0;
 }
-#app {
+.app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: black;
+  font-size: 1em;
+  line-height: 1.6em;
+
+  a {
+    color: #1376E5;
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: 2.8em;
+    margin-bottom: 0.3em;
+  }
 }
 </style>

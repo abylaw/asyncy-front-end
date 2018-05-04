@@ -1,10 +1,10 @@
 <template>
   <div class="index">
+    <app-header></app-header>
     <div class="columns">
       <div class="column is-one-fifth sidebar">
         <div>
-
-          <p>Topics</p>
+          <p class="has-text-weight-bold">Topics</p>
           <ul>
             <li>Marketing (42)</li>
             <li>Stories (19)</li>
@@ -12,7 +12,7 @@
             <li>Other (12)</li>
           </ul>
 
-          <p>Languages</p>
+          <p class="has-text-weight-bold">Languages</p>
           <ul>
             <li>Java (42)</li>
             <li>Javascript (19)</li>
@@ -21,13 +21,13 @@
 
         </div>
       </div>
-      <div class="column is-7">
-        <div>
+      <div class="column is-8 main-container">
+        <div class="search-bar-container">
           <search-bar/>
-          <p>Try topic:social or topic:machine-learning</p>
+          <p class="help-text">Try topic:social or topic:machine-learning</p>
         </div>
 
-        <div class="level is-mobile">
+        <div class="level is-mobile service-result-title-container">
           <div class="level-left"><h2 class="is-marginless">23 service results</h2></div>
           <div class="level-right">
             <div class="select is-small">
@@ -100,8 +100,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-h1, h2 {
+h2 {
   font-weight: normal;
+  font-size: 1.8em;
+  line-height: 1.8em;
+  margin-top: 1em;
 }
 
 ul {
@@ -109,10 +112,32 @@ ul {
   padding-left: 0;
 }
 
+.main-container {
+  margin-bottom: 2em;
+}
+
+.sidebar {
+  ul {
+    line-height: 2em;
+  }
+}
+
 .columns {
   max-width: 1100px;
   margin: 0 auto;
   text-align: left;
+}
+
+.search-bar-container {
+  margin-top: 1.5em;
+}
+
+.service-result-title-container {
+  margin-bottom: 0.8em;
+}
+
+.help-text {
+  color: #727272;
 }
 
 .search-result {
