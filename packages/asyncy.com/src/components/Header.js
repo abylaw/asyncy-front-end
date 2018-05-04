@@ -93,7 +93,7 @@ const Header = () => (
                 <li className='column' key={key} style={{
                   padding: '22px',
                 }}>
-                  <HeaderLink to={link.to}>{link.text}</HeaderLink>
+                  <HeaderLink to={link.to} onClick={closeMenu}>{link.text}</HeaderLink>
                 </li>
               )
             }
