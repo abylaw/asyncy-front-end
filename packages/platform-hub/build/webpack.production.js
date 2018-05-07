@@ -28,18 +28,10 @@ const webpackConfig = {
       },
     ],
   },
+  optimization: {
+  	minimize: true,
+  },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      output: {
-        comments: false,
-      },
-      debug: false,
-      compress: {
-        warnings: false,
-        dead_code: true,
-      },
-    }),
     // extract css into its own file
     new ExtractTextPlugin({
       filename: './css/[name].[contenthash].css',
