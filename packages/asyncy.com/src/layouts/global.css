@@ -9,11 +9,27 @@ a {
 input {
   font-size: 1em;
   border-radius: 6px;
-  border: none;
+  border: 1px solid transparent;
   padding: 15px 20px;
   margin-bottom: 10px;
   background-color: rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.76);
+  transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  outline: none;
+}
+
+input:focus {
+  border-color: #515CF9;
+  background-color: rgba(255,255,255,0.20);
   color: white;
+}
+
+input:invalid {
+  border-color: #F74545;
+  color: #F74545;
 }
 
 h1  {

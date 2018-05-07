@@ -6,7 +6,15 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-sass`,
     `gatsby-plugin-glamor`,
-    `gatsby-plugin-pageclip`,
+    { 
+      resolve: `gatsby-plugin-pageclip`,
+      options: {
+        successClass: 'success',
+        errorClass: 'error',
+        errorMessageContainerClass: 'error-message',
+        successMessage: 'Thanks!'
+      }
+    },
     {
       resolve: `gatsby-plugin-google-maps`,
       options: {
