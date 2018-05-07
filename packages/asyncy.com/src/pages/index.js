@@ -83,7 +83,7 @@ const IndexPage = () => (
         }}>
           <EmailForm btnStyle={{
             backgroundColor: 'white',
-            color: 'black',
+            color: '#515CF9',
           }}/>
         </div>
       </div>
@@ -247,9 +247,13 @@ const IndexPage = () => (
         padding: '10px 0'
       }}>
         <EmailForm inputStyle={{
-          backgroundColor: 'white',
-          color: 'grey',
+          backgroundColor: 'rgba(255, 255, 255, 0.9)',
+          color: 'rgba(100, 100, 100, 0.8)',
           boxShadow: '0px 1px 3px #4AB390',
+          ':focus': {
+            backgroundColor: 'rgba(255, 255, 255, 1.0)',
+            color: 'rgba(100, 100, 100, 1.0)'
+          }
         }} btnStyle={{
           backgroundColor: '#008257',
           color: 'white',

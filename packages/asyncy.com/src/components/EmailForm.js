@@ -20,9 +20,9 @@ const EmailForm = ({ placeholder, inputStyle, btnText, btnStyle }) => (
         paddingTop: 0,
         paddingBottom: 0,
       }}>
-        <input name='email' placeholder={ placeholder || 'Email address'} css={{
+        <input name='email' placeholder={ placeholder || 'Email address'} style={{
           width: '100%',
-        }} style={inputStyle || {}}/>
+        }} css={inputStyle || {}}/>
         <div className='error-message' style={{
           color: '#F74545',
           textAlign: 'left',
