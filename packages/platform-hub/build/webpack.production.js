@@ -3,8 +3,8 @@ const config = require('../config');
 const webpack = require('webpack');
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
 
 const webpackConfig = {
@@ -13,28 +13,48 @@ const webpackConfig = {
     rules: [
       {
         test: /\.scss$/i,
-        use: ExtractTextPlugin.extract({
-          fallback: 'vue-style-loader',
-          // resolve-url-loader may be chained before sass-loader if necessary
-          use: ['css-loader', 'sass-loader'],
-        }),
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.css$/i,
-        use: ExtractTextPlugin.extract({
-          fallback: 'vue-style-loader',
-          use: 'css-loader',
-        }),
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+        ],
       },
     ],
   },
   optimization: {
-  	minimize: true,
+    minimize: true,
+    splitChunks: {
+      chunks: "async",
+      minSize: 30000,
+      minChunks: 1,
+      maxAsyncRequests: 5,
+      maxInitialRequests: 3,
+      name: true,
+      cacheGroups: {
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10
+        }
+      }
+    },
   },
   plugins: [
     // extract css into its own file
-    new ExtractTextPlugin({
-      filename: './css/[name].[contenthash].css',
+    new MiniCssExtractPlugin({
+      filename: "[contenthash].min.css",
+      chunkFilename: "[contenthash].chunk.min.css"
     }),
     // Compress extracted CSS. We are using this plugin so that possible
     // duplicated CSS from different components can be deduped.
@@ -60,24 +80,6 @@ const webpackConfig = {
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency',
     }),
-    // split vendor js into its own file
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks(module) {
-        // any required modules inside node_modules are extracted to vendor
-        return (
-          module.resource && /\.js$/.test(module.resource) &&
-          module.resource.indexOf(path.join(__dirname, '../node_modules')) === 0
-        );
-      },
-    }),
-    // extract webpack runtime and module manifest to its own file in order to
-    // prevent vendor hash from being updated whenever app bundle is updated
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'manifest',
-      chunks: ['vendor'],
-    }),
-    // copy custom static assets
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../static'),
