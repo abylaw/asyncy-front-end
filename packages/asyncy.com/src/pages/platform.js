@@ -46,14 +46,14 @@ const textData = [
 
 const PlatformPage = ({ data }) => (
   <div>
-    <Hero title='A Complete Platform' subtitle='Designed to give developers all the tools to effectively run microservices through choreography. A symphony that make rapid application development a reality.'></Hero>
+    <Hero title='The Asyncy Platform' subtitle='Open source, full-stack platform with a symphony of tools and workflows for rapid application development.'></Hero>
 
     <section className='section' style={{
       maxWidth: '1100px',
     }}>
       <AlternatingTwoColumn reversed={true} textData={textData} />
     </section>
-    
+
     <section className='section' style={{
       textAlign: 'center',
     }}>
