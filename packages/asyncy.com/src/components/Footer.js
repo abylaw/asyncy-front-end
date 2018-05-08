@@ -31,13 +31,6 @@ const Footer = () => (
         </ul>
       </nav>
       <nav className='column'>
-        <div className={styles.menuHeader}>Support</div>
-        <ul className={styles.ul}>
-          <li className={styles.li}><Link to='http://asyncy.click/slack'>Slack</Link></li>
-          <li className={styles.li}><Link to='https://github.com/asyncy'>Github Issues</Link></li>
-        </ul>
-      </nav>
-      <nav className='column'>
         <div className={styles.menuHeader}>Resources</div>
         <ul className={styles.ul}>
           <li className={styles.li}><Link to='/events'>Events</Link></li>
