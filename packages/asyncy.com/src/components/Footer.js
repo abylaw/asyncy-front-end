@@ -23,7 +23,7 @@ const Footer = () => (
         <div className={styles.menuHeader}>Product</div>
         <ul className={styles.ul}>
           <li className={styles.li}><Link to='/platform'>Platform</Link></li>
-          <li className={styles.li}><Link to='https://docs.asyncy.com/#storyscript'>Storyscript</Link></li>
+          <li className={styles.li}><Link to='https://docs.asyncy.com'>Documentation</Link></li>
           <li className={styles.li}><Link to='/faq'>FAQ</Link></li>
           <li className={styles.li}>
             <a href='#' onClick={() => window.typeform.partners.open()}>Give Feedback</a>
