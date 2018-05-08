@@ -26,7 +26,7 @@ const Footer = () => (
           <li className={styles.li}><Link to='https://docs.asyncy.com/#storyscript'>Storyscript</Link></li>
           <li className={styles.li}><Link to='/faq'>FAQ</Link></li>
           <li className={styles.li}>
-            <a onClick={() => window.typeform.partners.open()}>Give Feedback</a>
+            <a href='#' onClick={() => window.typeform.partners.open()}>Give Feedback</a>
           </li>
         </ul>
       </nav>
