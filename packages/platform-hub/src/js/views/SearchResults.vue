@@ -48,6 +48,7 @@
               </div>
             </div>
           </div>
+          <pagination-bar @change="changePage" :total-items="26"></pagination-bar>
         </div>
       </div>
     </div>
@@ -55,44 +56,31 @@
 </template>
 
 <script>
+import PaginationBar from '../components/PaginationBar';
 import ServiceSummary from '../components/ServiceSummary';
 import SearchBar from '../components/SearchBar';
 
+const searchResultMock = {
+  title: 'Title',
+  description: 'Proin maximus ut lectus vel pellentesque. Morbi magna metus, eleifend quis nulla id, pretium sollicitudin velit. Vivamus eget venenatis neque. Morbi vel felis consequat, mollis ipsum ac, dignissim arcu. Sed rhoncus diam sed mi sodales.',
+  tags: ['Label'],
+};
+
 export default {
   name: 'SearchResults',
+  methods: {
+    changePage() {
+
+    },
+  },
   data() {
     return {
-      results: [
-        {
-          title: 'Title',
-          description: 'Proin maximus ut lectus vel pellentesque. Morbi magna metus, eleifend quis nulla id, pretium sollicitudin velit. Vivamus eget venenatis neque. Morbi vel felis consequat, mollis ipsum ac, dignissim arcu. Sed rhoncus diam sed mi sodales.',
-          tags: ['Label'],
-        },
-        {
-          title: 'Title',
-          description: 'Proin maximus ut lectus vel pellentesque. Morbi magna metus, eleifend quis nulla id, pretium sollicitudin velit. Vivamus eget venenatis neque. Morbi vel felis consequat, mollis ipsum ac, dignissim arcu. Sed rhoncus diam sed mi sodales.',
-          tags: ['Label', 'Label2'],
-        },
-        {
-          title: 'Title',
-          description: 'Proin maximus ut lectus vel pellentesque. Morbi magna metus, eleifend quis nulla id, pretium sollicitudin velit. Vivamus eget venenatis neque. Morbi vel felis consequat, mollis ipsum ac, dignissim arcu. Sed rhoncus diam sed mi sodales.',
-        },
-        {
-          title: 'Title',
-          description: 'Proin maximus ut lectus vel pellentesque. Morbi magna metus, eleifend quis nulla id, pretium sollicitudin velit. Vivamus eget venenatis neque. Morbi vel felis consequat, mollis ipsum ac, dignissim arcu. Sed rhoncus diam sed mi sodales.',
-        },
-        {
-          title: 'Title',
-          description: 'Proin maximus ut lectus vel pellentesque. Morbi magna metus, eleifend quis nulla id, pretium sollicitudin velit. Vivamus eget venenatis neque. Morbi vel felis consequat, mollis ipsum ac, dignissim arcu. Sed rhoncus diam sed mi sodales.',
-        },
-        {
-          title: 'Title',
-          description: 'Proin maximus ut lectus vel pellentesque. Morbi magna metus, eleifend quis nulla id, pretium sollicitudin velit. Vivamus eget venenatis neque. Morbi vel felis consequat, mollis ipsum ac, dignissim arcu. Sed rhoncus diam sed mi sodales.',
-        },
-      ],
+      numRecords: 2000,
+      results: Array(10).fill(searchResultMock, 0, 10),
     };
   },
   components: {
+    PaginationBar,
     ServiceSummary,
     SearchBar,
   },

@@ -25,6 +25,7 @@ export default {
 body {
   margin: 0;
 }
+
 .app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -33,15 +34,15 @@ body {
   color: black;
   font-size: 1em;
   line-height: 1.6em;
+}
 
-  a {
-    color: #1376E5;
-    text-decoration: none;
-  }
+a {
+  color: #1376E5;
+  text-decoration: none;
+}
 
-  h1 {
-    font-size: 2.8em;
-    margin-bottom: 0.3em;
-  }
+h1 {
+  font-size: 2.8em;
+  margin-bottom: 0.3em;
 }
 </style>

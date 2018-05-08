@@ -15,8 +15,10 @@
     "bulma": "^0.7.1",
     "style-loader": "^0.21.0",
     "vue": "^2.5.16",
+    "vue-pagination-2": "^1.6.1",
     "vue-router": "^2.7.0",
-    "vue-style-loader": "^4.1.0"
+    "vue-style-loader": "^4.1.0",
+    "vuejs-uib-pagination": "^1.0.5"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
