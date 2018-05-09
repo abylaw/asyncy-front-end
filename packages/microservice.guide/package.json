@@ -1,0 +1,23 @@
+{
+  "name": "microservice.guide",
+  "version": "0.0.1",
+  "description": "A standard for interfacing with microservices",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asyncy/microservice.guide.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/asyncy/microservice.guide/issues"
+  },
+  "homepage": "https://github.com/asyncy/microservice.guide#readme",
+  "devDependencies": {
+    "markdown-it-highlightjs": "^3.0.0",
+    "vuepress": "github:vuejs/vuepress"
+  }
+}
