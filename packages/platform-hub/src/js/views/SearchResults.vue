@@ -23,12 +23,12 @@
       </div>
       <div class="column is-8 main-container">
         <div class="search-bar-container">
-          <search-bar/>
+          <search-bar :value="search"/>
           <p class="help-text">Try topic:social or topic:machine-learning</p>
         </div>
 
         <div class="level is-mobile service-result-title-container">
-          <div class="level-left"><h2 class="is-marginless">23 service results</h2></div>
+          <div class="level-left"><h2 class="is-marginless">{{totalItems}} service results</h2></div>
           <div class="level-right">
             <div class="select is-small">
               <select>
@@ -44,11 +44,11 @@
           <div class="tile is-ancestor">
             <div class="tile is-parent is-vertical">
               <div v-for="r in results" class="tile is-child search-result">
-                <service-summary :title="r.title" :description="r.description" :tags="r.tags"></service-summary>
+                <service-summary :title="r.alias" description="Duis in erat eget nisl aliquet sagittis. Cras non quam erat. Proin porttitor, mauris eget finibus semper, tellus turpis fringilla." :tags="r.topics"></service-summary>
               </div>
             </div>
           </div>
-          <pagination-bar @change="changePage" :total-items="26"></pagination-bar>
+          <pagination-bar @change="changePage" :total-items="totalItems"></pagination-bar>
         </div>
       </div>
     </div>
@@ -56,27 +56,42 @@
 </template>
 
 <script>
+import queries from '../utils/graphql';
+
 import PaginationBar from '../components/PaginationBar';
 import ServiceSummary from '../components/ServiceSummary';
 import SearchBar from '../components/SearchBar';
 
-const searchResultMock = {
-  title: 'Title',
-  description: 'Proin maximus ut lectus vel pellentesque. Morbi magna metus, eleifend quis nulla id, pretium sollicitudin velit. Vivamus eget venenatis neque. Morbi vel felis consequat, mollis ipsum ac, dignissim arcu. Sed rhoncus diam sed mi sodales.',
-  tags: ['Label'],
-};
-
 export default {
   name: 'SearchResults',
+  props: ['search'],
+  apollo: {
+    results: {
+      query: queries.SEARCH_QUERY,
+      variables() {
+        return {
+          where: {
+            alias: {
+              like: `%${this.search || ''}%`,
+            },
+          },
+        };
+      },
+      update(data) {
+        const allServices = data.viewer.allServices;
+        this.totalItems = allServices.aggregations.count;
+        return allServices.edges.map(e => e.node);
+      },
+    },
+  },
   methods: {
     changePage() {
-
     },
   },
   data() {
     return {
-      numRecords: 2000,
-      results: Array(10).fill(searchResultMock, 0, 10),
+      totalItems: 0,
+      results: [],
     };
   },
   components: {

@@ -5,7 +5,8 @@
       <div class="column is-one-fifth sidebar">
         <div>
           <p class="has-text-weight-bold">Topics</p>
-          <div><span class="tag">Marketing</span></div>
+          <div class="no-topics" v-if="!service.topics">No topics</div>
+          <div v-for="t in service.topics"><span class="tag">{{t}}</span></div>
 
           <p class="has-text-weight-bold">Developer Links</p>
           <ul>
@@ -17,7 +18,7 @@
       <div class="column is-7">
         <div class="level name-container is-mobile">
           <div class="level-left">
-            <h1>Name</h1><i class="fas fa-check checkmark" aria-hidden="true"></i>
+            <h1>{{service.alias}}</h1><i class="fas fa-check checkmark" aria-hidden="true"></i>
           </div>
         </div>
         <div class="level-left">
@@ -119,12 +120,32 @@
 </template>
 
 <script>
+import queries from '../utils/graphql';
 import ServiceSummary from '../components/ServiceSummary';
 
 export default {
   name: 'SearchResults',
+  props: ['alias'],
+  apollo: {
+    service: {
+      query: queries.SERVICE_QUERY,
+      variables() {
+        return {
+          where: {
+            alias: {
+              eq: this.alias,
+            },
+          },
+        };
+      },
+      update(data) {
+        return data && data.viewer.allServices.edges && data.viewer.allServices.edges[0].node;
+      },
+    },
+  },
   data() {
     return {
+      service: {},
       results: [
         {
           title: 'Title',
@@ -169,6 +190,11 @@ h1, h2 {
 
 .sidebar ul {
   line-height: 2em;
+}
+
+.no-topics {
+  font-size: 0.9em;
+  color: #ccc;
 }
 
 .name-container {

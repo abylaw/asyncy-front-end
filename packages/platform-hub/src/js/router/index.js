@@ -17,11 +17,17 @@ export default new Router({
       path: '/search',
       name: 'Search',
       component: SearchResults,
+      props(route) {
+        return { search: route.query.q };
+      },
     },
     {
-      path: '/service',
+      path: '/service/:alias',
       name: 'Service',
       component: Service,
+      props(route) {
+        return { alias: route.params.alias };
+      },
     },
   ],
   scrollBehavior() {

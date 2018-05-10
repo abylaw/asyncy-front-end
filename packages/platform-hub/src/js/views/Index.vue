@@ -3,7 +3,7 @@
     <app-header></app-header>
     <div class="hero">
       <h1>Asyncy Hub</h1>
-      <subtitle class="subtitle">Service discovery and marketplace for Asyncy</subtitle>
+      <p class="subtitle">Service discovery and marketplace for Asyncy</p>
       <div class="search-bar-container">
         <div class="field">
           <div class="control">
@@ -55,8 +55,8 @@
           <h2>Featured services</h2>
           <div class="featured-services">
             <div class="tile is-ancestor">
-              <div class="tile is-parent" v-for="f in featured">
-                <router-link to="/service">
+              <div class="tile is-parent" v-for="f in data.featuredServices">
+                <router-link :to="`/service/${f.alias}`">
                   <div class="image-placeholder tile is-child"></div>
                 </router-link>
               </div>
@@ -69,13 +69,13 @@
           <div>
             <div class="tile is-ancestor">
               <div class="tile is-parent is-vertical">
-                <div v-for="r in recentlyAdded.slice(0, 3)" class="tile is-child">
-                  <service-summary :title="r.title" :description="r.description"></service-summary>
+                <div v-for="r in data.recentServices.slice(0, 3)" class="tile is-child">
+                  <service-summary :title="r.alias" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices turpis vel risus." :tags="r.topics"></service-summary>
                 </div>
               </div>
               <div class="tile is-parent is-vertical">
-                <div v-for="r in recentlyAdded.slice(3, 6)" class="tile is-child">
-                  <service-summary :title="r.title" :description="r.description"></service-summary>
+                <div v-for="r in data.recentServices.slice(3, 6)" class="tile is-child">
+                  <service-summary :title="r.alias" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices turpis vel risus." :tags="r.topics"></service-summary>
                 </div>
               </div>
             </div>
@@ -119,50 +119,29 @@
 </template>
 
 <script>
+import queries from '../utils/graphql';
 import ServiceSummary from '../components/ServiceSummary';
 import SearchBar from '../components/SearchBar';
 
 export default {
   name: 'index',
+  apollo: {
+    data: {
+      query: queries.INDEX_QUERY,
+      update(data) {
+        return {
+          featuredServices: data.featuredServices.allServices.edges.map(e => e.node),
+          recentServices: data.recentServices.allServices.edges.map(e => e.node),
+        };
+      },
+    },
+  },
   data() {
     return {
-      featured: [
-        {
-          id: '123',
-        },
-        {
-          id: 'abv',
-        },
-        {
-          id: 'dddc',
-        },
-      ],
-      recentlyAdded: [
-        {
-          title: 'Title',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices turpis vel risus.',
-        },
-        {
-          title: 'Title',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices turpis vel risus.',
-        },
-        {
-          title: 'Title',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices turpis vel risus.',
-        },
-        {
-          title: 'Title',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices turpis vel risus.',
-        },
-        {
-          title: 'Title',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices turpis vel risus.',
-        },
-        {
-          title: 'Title',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultrices turpis vel risus.',
-        },
-      ],
+      data: {
+        featuredServices: [],
+        recentServices: [],
+      },
       stories: [
         {
           title: 'Title',

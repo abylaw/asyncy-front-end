@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/service">
+  <router-link :to="`/service/${title}`">
     <div class="media">
       <div class="media-left">
         <div class="recently-added-image"></div>
