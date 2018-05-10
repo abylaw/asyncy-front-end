@@ -1,0 +1,2 @@
+# Redirect domain aliases to primary domain
+https://microservices.guide/* https://microservice.guide/:splat 301!

@@ -1,7 +1,7 @@
 {
   "name": "microservice.guide",
   "version": "0.0.1",
-  "description": "A standard for interfacing with microservices",
+  "description": "A guide to designing platform-agnostic microservices that are highly reusable.",
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev",
@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/asyncy/microservice.guide.git"
+    "url": "git+https://github.com/microservice.guide/microservice.guide.git"
   },
   "author": "",
   "bugs": {
-    "url": "https://github.com/asyncy/microservice.guide/issues"
+    "url": "https://github.com/microservice.guide/microservice.guide/issues"
   },
-  "homepage": "https://github.com/asyncy/microservice.guide#readme",
+  "homepage": "https://github.com/microservice.guide/microservice.guide#readme",
   "devDependencies": {
     "markdown-it-highlightjs": "^3.0.0",
     "vuepress": "github:vuejs/vuepress"
