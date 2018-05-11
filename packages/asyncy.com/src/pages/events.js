@@ -1,6 +1,10 @@
 import React from 'react'
 import Hero from '../components/Hero'
 
+import PageBackground from '../components/PageBackground'
+
+import headerLeft from '../assets/images/events-header-left.svg'
+import headerRight from '../assets/images/events-header-right.svg'
 import calendar from '../assets/images/icon_calendar.svg'
 import pin from '../assets/images/icon_pin.svg'
 import launchPartyImg from '../assets/images/launch-party.png'
@@ -37,6 +41,15 @@ const data = {
 
 const EventPage = () => (
   <div>
+    <PageBackground
+      leftImage={headerLeft}
+      rightImage={headerRight}
+      scale={0.6}
+      leftX={-380}
+      leftY={35}
+      rightX={-160}
+      rightY={40}
+    />
     <Hero title={data.title} subtitle={data.subtitle}></Hero>
 
     <section className='section' style={{
