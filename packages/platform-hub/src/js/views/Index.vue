@@ -201,7 +201,7 @@ ul {
 .hero {
   overflow: auto;
   color: white;
-  background: #060717;
+  background: #111;
   padding-bottom: 50px;
 }
 

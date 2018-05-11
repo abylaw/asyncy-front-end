@@ -3,7 +3,7 @@
     <div class="level">
       <div class="level-left">
         <router-link to="/">
-          <img src="../../assets/logo.svg"/>
+          <img class="logo" src="../../assets/logo.svg"/>
         </router-link>
       </div>
       <div class="level-item">
@@ -40,6 +40,7 @@ export default {
 
 <style scoped lang="scss">
 .level {
+  height: 100%;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -48,6 +49,12 @@ export default {
   width: 100%;
   margin-right: 2em;
   margin-left: 2em;
+
+  /deep/ {
+    .input {
+      height: 2em;
+    }
+  }
 }
 
 .level-item:not(:last-child) {
@@ -59,7 +66,13 @@ export default {
 }
 
 .app-header {
-  background-color: #060717;
-  padding: 15px;
+  background-color: #111;
+  padding: 10px;
+  height: calc(4em - 20px);
+
+  .logo {
+    margin-top: 0.2em;
+    height: 1.2em;
+  }
 }
 </style>
