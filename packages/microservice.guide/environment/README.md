@@ -1,9 +1,9 @@
 # Environment
 
-Define required environment variables.
+Services **MUST** list environment variables that may be used to perform any commands the service exposes.
 
-```yaml
-env:
+```yaml{2}
+environment:
   access_token:
     type: string
     pattern: "^key_"
@@ -12,5 +12,6 @@ env:
       Description of how the user should produce this variable
 ```
 
-Containers will **only** get the environment variables that are requested.
-Application and other container environment variables are strictly not provided.
+Services **SHOULD** only be exposed the environment variables it requests.
+
+Environment variables are provided when the service first starts.

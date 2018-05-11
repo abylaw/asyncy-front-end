@@ -11,6 +11,8 @@ A container can accept input and write output (like a traditional function) or s
 A `microservice.yml` file should be provided which outlines the command structure and operations of the container as seen below in the documentation.
 
 
-## Examples
+## Definitions
 
-...
+- **MUST**
+- **SHOULD**
+- **MAY**

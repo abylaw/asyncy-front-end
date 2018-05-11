@@ -1,3 +1,4 @@
 # Health Checks
 
-Inherit from the Dockerfile's `HEALTHCHECK`. https://docs.docker.com/engine/reference/builder/#healthcheck
+A service **SHOULD** provide health checks through the Dockerfile `HEALTHCHECK`.
+[Learn more about Docker HEALTHCHECK](https://docs.docker.com/engine/reference/builder/#healthcheck)

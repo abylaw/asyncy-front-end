@@ -1,6 +1,6 @@
 # Lifecycle
 
-A user-defined command may be provided to prepare the containers execution environment or clean-up workspace.
+A service **MAY** define it's own procedure for when the service is first started and when it is shutdown.
 
 ```yaml
 lifecycle:
@@ -8,4 +8,4 @@ lifecycle:
   shutdown: ./shutdown.sh
 ```
 
-This command must exit with status 0. `stdout` is logged and not accessable in the Storyline.
+The `startup` command **MUST** exit with `0` status.

@@ -1,6 +1,6 @@
 # Metrics
 
-Microservices **SHOULD** support metrics to [Prometheus](https://prometheus.io/).
+Services **SHOULD** support metrics to [Prometheus](https://prometheus.io/).
 
 ## Namespacing
 
