@@ -22,12 +22,14 @@ export default {
 @import "../../node_modules/bulma/sass/elements/button";
 @import "../../node_modules/bulma/sass/elements/form";
 
+@import "../assets/fonts/1804-GFNGYO";
+
 body {
   margin: 0;
 }
 
 .app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: Graphik Web, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
