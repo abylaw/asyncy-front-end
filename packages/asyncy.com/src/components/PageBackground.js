@@ -1,13 +1,13 @@
 import React from 'react'
 
-const PageBackground = ({ leftImage, rightImage, leftX, leftY }) => (
+const PageBackground = ({ leftImage, rightImage, leftX, leftY, rightX, rightY, scale }) => (
   <div>
   <div css={{
     backgroundImage: `url(${leftImage})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'contain',
-    width: '1200px',
-    height: '700px',
+    width: `calc(1200px * ${scale || 1})`,
+    height: `calc(700px * ${scale || 1})`,
     position: 'absolute',
     zIndex: '-1',
     left: leftX || '-700px',
@@ -22,8 +22,8 @@ const PageBackground = ({ leftImage, rightImage, leftX, leftY }) => (
     width: '450px',
     height: '700px',
     overflow: 'hidden',
-    top: '-170px',
-    right: '0px',
+    top: rightY || '-170px',
+    right: rightX || '0px',
     '@media (max-width: 768px)': {
       width: '250px',
     }
@@ -32,8 +32,8 @@ const PageBackground = ({ leftImage, rightImage, leftX, leftY }) => (
       backgroundImage: `url(${rightImage})`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'contain',
-      width: '1200px',
-      height: '700px',
+      width: `calc(1200px * ${scale || 1})`,
+      height: `calc(700px * ${scale || 1})`,
     }}/>
   </div>
   </div>

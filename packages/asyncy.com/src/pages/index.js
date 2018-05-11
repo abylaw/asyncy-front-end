@@ -15,6 +15,11 @@ import digitalOceanLogo from '../assets/images/digital_ocean_logo.svg'
 import placeholder from '../assets/images/placeholder.svg'
 import bg from '../assets/images/purple-bg-pattern.svg'
 
+import headerLeft from '../assets/images/home-header-left.svg'
+import headerRight from '../assets/images/home-header-right.svg'
+
+import PageBackground from '../components/PageBackground'
+
 const data = {
   title: 'Write stories, then code.',
   subtitle: 'The choreographed microservice platform for rapid application development.',
@@ -63,6 +68,15 @@ const data = {
 
 const IndexPage = () => (
   <div>
+    <PageBackground
+      leftImage={headerLeft}
+      rightImage={headerRight}
+      scale={0.70}
+      leftX={-320}
+      leftY={-55}
+      rightX={-85}
+      rightY={-60}
+    />
     <div
       style={{
         marginTop: '70px',
