@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link from './Link'
 
 const HeaderLink = (props) => (
   <span css={{
@@ -7,10 +7,9 @@ const HeaderLink = (props) => (
     ':before': {
       content: '""',
       position: 'absolute',
-      width: 'calc(100% - 24px)',
+      width: '100%',
       height: '2px',
       bottom: '-9px',
-      left: '12px',
       backgroundColor: '#888',
       visibility: 'hidden',
       transform: 'scaleX(0)',
@@ -25,9 +24,7 @@ const HeaderLink = (props) => (
       transition: 'all 0.15s ease-in-out 0s',
     },
   }}>
-    <Link {...props} style={{
-      padding: '12px',
-    }}>
+    <Link {...props}>
       {props.children}
     </Link>
   </span>

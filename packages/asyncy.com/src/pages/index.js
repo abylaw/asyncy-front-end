@@ -89,7 +89,7 @@ const IndexPage = () => (
           textAlign: 'center',
         }}
       >
-        <h1>{data.title}</h1>
+        <h1 style={{ fontSize: '3.2em' }}>{data.title}</h1>
         <subtitle>{data.subtitle}</subtitle>
         <div style={{
           maxWidth: '560px',

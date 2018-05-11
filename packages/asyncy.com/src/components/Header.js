@@ -17,6 +17,7 @@ const closeMenu = () => {
 
 const headerLinks = [
   { text: 'Platform', to: '/platform' },
+  { text: 'Documentation', to: 'https://docs.asyncy.com' },
   { text: 'About', to: '/about' },
   { text: 'Events', to: '/events' },
   { text: 'Contact', to: '/contact' },
