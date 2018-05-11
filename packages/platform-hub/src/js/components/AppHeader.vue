@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="level-item"><a href="/">Explore</a></div>
-      <div class="level-item"><a href="https://inspiring-snyder-9c98ec.netlify.com/platform">Platform</a></div>
+      <div class="level-item"><a href="https://refresh--asyncy-homepage.netlify.com/platform">Platform</a></div>
       <div class="level-item"><a href="https://docs.asyncy.com">Documentation</a></div>
       <div class="level-right">
         <button class="button">
