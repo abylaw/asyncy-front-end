@@ -11,6 +11,7 @@ import App from './App';
 import router from './router';
 
 import AppHeader from './components/AppHeader';
+import AppFooter from './components/AppFooter';
 
 const httpLink = new HttpLink({
   uri: 'https://us-west-2.api.scaphold.io/graphql/fake-asyncy',
@@ -31,6 +32,7 @@ const apolloProvider = new VueApollo({
 
 Vue.config.productionTip = false;
 Vue.component('app-header', AppHeader);
+Vue.component('app-footer', AppFooter);
 
 /* eslint-disable no-new */
 new Vue({

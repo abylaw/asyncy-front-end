@@ -31,9 +31,7 @@ export default {
   props: ['hasSearchBar'],
   components: { SearchBar },
   data() {
-    return {
-      msg: 'Welcome to Your Vue.js App',
-    };
+    return {};
   },
 };
 </script>

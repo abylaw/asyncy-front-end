@@ -25,10 +25,12 @@ export default {
 @import "../assets/fonts/1804-GFNGYO";
 
 body {
+  background: #111;
   margin: 0;
 }
 
 .app {
+  background: white;
   font-family: Graphik Web, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
