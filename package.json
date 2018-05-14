@@ -1,7 +1,7 @@
 {
 	"scripts": {
 		"bootstrap": "lerna bootstrap",
-		"bootstrap-only": "lerna bootstrap --scope $LERNA_ONLY",
+		"bootstrap-only": "lerna bootstrap --scope $LERNA_ONLY --include-filtered-dependencies",
 		"build": "for d in ./packages/* ; do (cd $d; npm run build); done",
 		"build-only": "(cd packages/$LERNA_ONLY; npm run build)",
 		"postbuild": "rm -rf dist/; mkdir dist; for d in ./packages/* ; do (cp -R $d/dist/ ./dist/) done"
