@@ -1,11 +1,17 @@
 # Commands
+Defining commands give developers a way to organize which microservices are exposed and how they are used within an application or platform.
 
-Services **SHOULD** define commands and the arguments that can be provided in the command.
+Properly defining commands can assist with the following:
+  - Service discovery
+  - Documentation
+  - Operational insight
+
+Services **SHOULD** define commands and arguments that can be used.
 
 [[toc]]
 
 
-## Overview
+# Basic Usage
 
 ```yaml
 commands:
@@ -17,9 +23,7 @@ commands:
         type: json
 ```
 
-Defining commands outline container operations and assist service discovery during development.
-
-In addition to the basics above, there are advanced configurations.
+# Advanced Usage
 
 ## Types
 
@@ -37,7 +41,7 @@ Arguments **MUST** provide a data type.
 
 ## Help
 
-Arguments **SHOULD** provide a short description of the command and arguments can provide clarity to end users.
+Arguments **SHOULD** provide a short description of the command and any arguments that can provide clarity to end users.
 
 ```yaml{3}
 commands:
