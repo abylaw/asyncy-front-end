@@ -6,7 +6,8 @@ Follow the [Docker Docs](https://docs.docker.com/develop/develop-images/dockerfi
 
 A container can accept input and write output (like a traditional function) or stream output (e.g., web servers, chatbots, social streams).
 
-* Try to keep images to a bare minimum. Consider using a base image from `alpine`.
+* Keep images to a bare minimum
+    * Consider using a parent image from `alpine` or a base image `FROM scratch`
 * Include an `EXPOSE` instruction for external access
 * Include an `ENTRYPOINT`
 
