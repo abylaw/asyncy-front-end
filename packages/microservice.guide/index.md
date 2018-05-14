@@ -14,12 +14,7 @@ footer: MIT Licensed
 
 ## Why Microservice.Guide
 
-Microservices, by design, are intended to be highly reusable, operational-specific and language-agnostic.
-
-This guide defines the standard that defines how to interface with microservices to provide a blueprint for consistency and reusability.
-
-By following this documentation, developers will be able to create a platform that is well-documented and portable while not compromising containerization flexibility.
-
+Microservices, by design, are intended to be highly reusable, operational-specific and language-agnostic. This guide defines the standard that defines how to interface with microservices to provide a blueprint for consistency and reusability. By following this documentation, developers will be able to create a platform that is well-documented and portable while not compromising containerization flexibility.
 
 ## Using Microservice.Guide
 
