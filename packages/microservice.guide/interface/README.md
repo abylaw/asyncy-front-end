@@ -52,7 +52,7 @@ docker run --rm alpine echo -n 'Hello World'
 ```
 
 ## HTTP
-HTTP can be used as a way to expose your microservice. Data can be transmitted using query strings and the `POST` request method.
+HTTP can be used as a way to expose your microservice. Data can be transmitted using query strings and any HTTP request method your service supports.
 
 The service **MUST** provide the method and endpoint used to call the given command.
 
