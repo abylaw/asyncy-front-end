@@ -1,6 +1,6 @@
 # Output
 
-## Static (Docker Run / Exec)
+## Standard Output (Docker Run / Exec)
 
 The service **MAY** write data to `stdout` which is considered the result of the operation.
 
