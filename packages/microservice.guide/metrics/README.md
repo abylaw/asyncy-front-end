@@ -1,6 +1,6 @@
 # Metrics
 
-Services **SHOULD** support metrics to [Prometheus](https://prometheus.io/).
+Services **SHOULD** support metric delivery *or* scrapting via Prometheus, StatsD, or flat files.
 
 ## Namespacing
 
