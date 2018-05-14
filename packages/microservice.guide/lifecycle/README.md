@@ -1,6 +1,6 @@
 # Lifecycle
 
-A service **MAY** define it's own procedure for when the service is first started and when it is shutdown.
+A service **MAY** define custom lifecycle hooks for startup and shutdown.
 
 ```yaml
 lifecycle:
@@ -8,4 +8,4 @@ lifecycle:
   shutdown: ./shutdown.sh
 ```
 
-The `startup` command **MUST** exit with `0` status.
+*Lifecycle commands **MUST** exit status zero.*
