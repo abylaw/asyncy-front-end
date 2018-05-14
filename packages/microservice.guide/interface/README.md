@@ -1,12 +1,12 @@
 # Interfacing
 
-Services **MUST** interface with one of the options below.
+Services **MUST** provide an interface in one of the following ways:
 
 [[toc]]
 
 ## Docker Run / Exec
 
-Docker run/exec can be used as an interface for execution and communication by passing data as shell arguments and receiving output
+Docker run/exec can be used as an interface for execution **and** communication. Data is transmitted using standard output. Arguments can be used to pass values to the container.
 
 ```bash
 docker run --rm alpine echo 'Hello World'
@@ -25,7 +25,7 @@ Command arguments **MAY** provide a custom `format`. The placeholder (`{}`) is r
 
 The default format is `--{name} '{value}'`.
 
-
+### Example Definition:
 ```yaml{3}
 commands:
   echo:
@@ -53,7 +53,13 @@ docker run --rm alpine echo -n 'Hello World'
 ```
 
 ## HTTP
+HTTP can be used as a way to expose your microservice. Data can be transmitted using query strings and the `POST` request method.
 
+The service **MUST** provide the method and endpoint used to call the given command.
+
+The service **MUST** define how to start the HTTP server by providing the `http` configuration.
+
+### Example Definition:
 ```yaml{6}
 commands:
   foobar:
@@ -69,10 +75,6 @@ http:
   port: 8080
   entrypoint: ["/bin/server", "-p", "8080"]
 ```
-
-The service **MUST** provide the method and endpoint used to call the given command.
-
-The service **MUST** define how to start the HTTP server by providing the `http` configuration.
 
 
 ## RPC
