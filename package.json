@@ -2,7 +2,7 @@
 	"scripts": {
 		"bootstrap": "lerna bootstrap",
 		"build": "for d in ./packages/* ; do (cd $d; npm run build); done",
-		"postbuild": "rm -rf dist/; mkdir dist; for d in ./packages/* ; do (mkdir dist/$(basename $d); cp -R $d/dist/ ./dist/$(basename $d)) done"
+		"postbuild": "rm -rf dist/; mkdir dist; for d in ./packages/* ; do (cp -Rc $d/dist/ ./dist/) done"
 	},
 	"devDependencies": {
 		"lerna": "^2.11.0"
