@@ -1,14 +1,15 @@
-# Metrics
+# metrics
 
-Services **SHOULD** support metric delivery to [Prometheus](https://prometheus.io). Ingestion can be accomplished in many different ways.
+Services **should** support metric delivery to [prometheus](https://prometheus.io). Ingestion can be accomplished in many different ways.
 
-## Namespacing
+### Namespacing
 
 There are many ways to organize metrics. It is important to always properly namespace your collected data. This gives you the flexibility to easily slice and dice your metrics at a later date.
 
 See [Prometheus Metric and Label Naming](https://prometheus.io/docs/practices/naming/) to get a better understanding of best practices.
 
 ## StatsD
+Containers can send metrics to StatsD for aggregation and delivery.
 
 > StatsD basic usage
 
@@ -22,8 +23,6 @@ echo "accounts.authentication.password.failure.no_email_found:1|c" | nc -u -w1 $
 echo "accounts.authentication.password.failure.no_email_found:1|c|#tag:value,another_tag:another_value" | nc -u -w1 $MSG_STATSD_HOSTNAME $MSG_STATSD_PORT
 ```
 
-Containers can write metrics to StatsD.
-
 
 | Endpoint | Port | Protocol |
 | --- | --- | --- |
@@ -35,6 +34,8 @@ See [https://github.com/etsy/statsd](https://github.com/etsy/statsd) for usage d
 ## Flat Files (Metrics 2.0)
 
 > Flat Files (Metrics 2.0)
+
+Write [Metrics 2.0](http://metrics20.org/) output to `/var/lib/metrics.dat`
 
 ```shell
 echo '
@@ -54,7 +55,13 @@ meta: {
 ' >> /var/lib/metrics.dat
 ```
 
-Write [Metrics 2.0](http://metrics20.org/) output to `/var/lib/metrics.dat`
+## Prometheus Exporter
+Define your metrics path in `microservice.yml`
+```yaml
+metrics:
+  ssl: false
+  port: 8080
+  uri: /metrics
+```
 
-## Prometheus Exporters and Integrations
-<!-- TODO -->
+See official [Prometheus](https://prometheus.io/docs/instrumenting/exporters/) to understand how to write an exporter
