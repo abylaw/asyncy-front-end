@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "asyncy.com",
+  "description": "Asyncy marketing site",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Andrea Law",
   "dependencies": {
     "bulma": "^0.7.0",
     "gatsby": "^1.9.250",
