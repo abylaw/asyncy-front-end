@@ -25,7 +25,6 @@ Command arguments **MAY** provide a custom `format`. The placeholder (`{}`) is r
 
 The default format is `--{name} '{value}'`.
 
-### Example Definition:
 ```yaml{3}
 commands:
   echo:
@@ -59,7 +58,6 @@ The service **MUST** provide the method and endpoint used to call the given comm
 
 The service **MUST** define how to start the HTTP server by providing the `http` configuration.
 
-### Example Definition:
 ```yaml{6}
 commands:
   foobar:
