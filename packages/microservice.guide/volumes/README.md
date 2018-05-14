@@ -6,7 +6,7 @@ A container **MAY** require a service-specific volume that that is accessable to
 
 ```yaml
 volumes:
-  foobar:  # custom title
+  foobar:  # custom name
     target: /mnt/data
     persist: true
 ```
