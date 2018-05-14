@@ -1,6 +1,6 @@
 # Metrics
 
-Services **SHOULD** support metric delivery *or* scrapting via Prometheus, StatsD, or flat files.
+Services **SHOULD** support metric delivery to [Prometheus](https://prometheus.io). Ingestion can be accomplished in many different ways.
 
 ## Namespacing
 
