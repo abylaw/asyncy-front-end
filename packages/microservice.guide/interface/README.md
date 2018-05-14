@@ -6,8 +6,7 @@ Services **MUST** interface with one of the options below.
 
 ## Docker Run / Exec
 
-Docker run/exec is a generic interface for communication.
-Simply passing data as shell arguments and getting output.
+Docker run/exec can be used as an interface for execution and communication by passing data as shell arguments and receiving output
 
 ```bash
 docker run --rm alpine echo 'Hello World'
