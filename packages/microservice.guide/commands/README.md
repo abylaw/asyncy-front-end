@@ -17,7 +17,7 @@ commands:
         type: json
 ```
 
-Defining commands outline container operations and assist service discovery during Storyscript development.
+Defining commands outline container operations and assist service discovery during development.
 
 In addition to the basics above, there are advanced configurations.
 
