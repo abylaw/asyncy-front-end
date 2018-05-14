@@ -15,6 +15,6 @@ A `microservice.yml` file should be provided which outlines the command structur
 
 ## Keywords
 
-- **MUST** - It is required for a service to contain this functionality
-- **SHOULD** - It is recommended for a service to contain this functionality
-- **MAY** - It is optional for a service to contain this functionality
+- **MUST** - Required for a service to contain this functionality
+- **SHOULD** - Recommended for a service to contain this functionality
+- **MAY** - Optional for a service to contain this functionality
