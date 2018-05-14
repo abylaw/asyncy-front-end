@@ -1,6 +1,6 @@
 # Metrics
 
-Services **should** support metric delivery to [prometheus](https://prometheus.io). Ingestion can be accomplished in many different ways.
+Services **should** support metric delivery to [Prometheus](https://prometheus.io). Ingestion can be accomplished in many different ways.
 
 ### Namespacing
 
@@ -64,4 +64,4 @@ metrics:
   uri: /metrics
 ```
 
-See official [Prometheus](https://prometheus.io/docs/instrumenting/exporters/) to understand how to write an exporter
+See the official [Prometheus](https://prometheus.io/docs/instrumenting/exporters/) to understand how to write an exporter
