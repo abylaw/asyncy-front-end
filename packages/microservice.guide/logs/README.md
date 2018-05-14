@@ -1,6 +1,6 @@
 # Logs
 
-Services **MUST** write logs to a specific file location in a specific format.
+Services **MUST** write logs to a specific location in a specific format.
 
 ```
 service: [<level>] <message>
