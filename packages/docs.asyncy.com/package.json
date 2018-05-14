@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev",
-    "build": "vuepress build && cp -R .vuepress/dist dist"
+    "build": "vuepress build"
   },
   "repository": {
     "type": "git",
