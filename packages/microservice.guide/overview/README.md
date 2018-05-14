@@ -1,5 +1,7 @@
 # Overview
 
+*This guide assumes you're using the latest version of Docker*
+
 Follow the [Docker Docs](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) for Dockerfile best practices
 
 A container can accept input and write output (like a traditional function) or stream output into the Storyscript  (like web servers, chat bots, social streams).
