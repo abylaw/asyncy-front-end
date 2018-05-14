@@ -1,4 +1,4 @@
-# metrics
+# Metrics
 
 Services **should** support metric delivery to [prometheus](https://prometheus.io). Ingestion can be accomplished in many different ways.
 
