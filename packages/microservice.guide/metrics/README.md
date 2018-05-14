@@ -64,4 +64,4 @@ metrics:
   uri: /metrics
 ```
 
-See the official [Prometheus](https://prometheus.io/docs/instrumenting/exporters/) to understand how to write an exporter
+See the official [Prometheus](https://prometheus.io/docs/instrumenting/exporters/) documentation to understand how to write an exporter
