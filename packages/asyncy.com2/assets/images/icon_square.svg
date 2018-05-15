@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>68377B45-1A6C-4C2E-8E53-05BABC2A610A@3x</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Platform" transform="translate(-53.000000, -737.000000)" stroke="#FFFFFF">
+            <g id="icon-square" transform="translate(54.000000, 738.000000)">
+                <polygon id="Stroke-184" points="0 22 4 22 4 18 0 18"></polygon>
+                <polygon id="Stroke-185" points="9 13 13 13 13 9 9 9"></polygon>
+                <polygon id="Stroke-186" points="0 13 4 13 4 9 0 9"></polygon>
+                <polygon id="Stroke-187" points="9 4 13 4 13 0 9 0"></polygon>
+                <polygon id="Stroke-188" points="0 4 4 4 4 0 0 0"></polygon>
+                <polygon id="Stroke-189" points="18 4 22 4 22 0 18 0"></polygon>
+                <path d="M9,20 L13,20" id="Stroke-190"></path>
+                <path d="M11,18 L11,22" id="Stroke-191"></path>
+                <path d="M18,20 L22,20" id="Stroke-192"></path>
+                <path d="M20,18 L20,22" id="Stroke-193"></path>
+                <path d="M18,11 L22,11" id="Stroke-194"></path>
+                <path d="M20,9 L20,13" id="Stroke-195"></path>
+            </g>
+        </g>
+    </g>
+</svg>
