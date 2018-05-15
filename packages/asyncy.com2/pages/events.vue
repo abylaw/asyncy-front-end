@@ -18,7 +18,7 @@
         <div class='column is-three-quarters' :style="{
           margin: '0 auto',
         }">
-          <div v-for="(event, key) in events" class='columns' :key="key" :style="{
+          <div v-for="(event, index) in events" class='columns' :key="index" :style="{
             padding: '2.2em 0',
             borderBottom: (index === events.length - 1) ? 'none' : '1px solid #41434A'
           }">
